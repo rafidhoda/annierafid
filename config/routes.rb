@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :gifts
   resources :guests
   resources :rsvps
   root 'pages#home'
