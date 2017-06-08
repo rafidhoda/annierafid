@@ -8,6 +8,7 @@
 <p>
   <strong>Currency:</strong>
   <%= @gift.currency %>
+  <%= @nok %>
 </p>
 
 <%= form_tag charges_path(gift: @gift) do %>
@@ -22,7 +23,7 @@
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
           data-description="A month's subscription"
-          data-amount="<%= @gift.amount %>"
+          data-amount="<%= @amount %>"
           data-locale="auto"></script>
 <% end %>
 

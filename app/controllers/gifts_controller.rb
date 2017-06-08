@@ -1,6 +1,9 @@
 class GiftsController < ApplicationController
   before_action :set_gift, only: [:show, :edit, :update, :destroy]
 
+  require 'net/http'
+  require 'json'
+
   # GET /gifts
   # GET /gifts.json
   def index
@@ -10,11 +13,30 @@ class GiftsController < ApplicationController
   # GET /gifts/1
   # GET /gifts/1.json
   def show
-    @response = HTTParty.get('http://api.fixer.io/latest?base=USD')
+    url = 'http://api.fixer.io/latest?base=USD'
+    uri = URI(url)
+    response = Net::HTTP.get(uri)
+    exchange = JSON.parse(response)
+    @nok = exchange['rates']['NOK'].to_f
+    @rub = exchange['rates']['RUB'].to_f
+    @gbp = exchange['rates']['GBP'].to_f
 
-    @exchange = JSON.parse(response.body)
+    # Amount in cents
+    orig_amount = @gift.amount
 
-    @nok = @exchange['rates']['NOK']
+    def convert_amount(orig_amount, currency)
+      if currency == 'nok'
+        ((orig_amount / @nok) * 100).floor
+      elsif currency == 'rub'
+        ((orig_amount / @rub) * 100).floor
+      elsif currency == 'gbp'
+        ((orig_amount / @gbp) * 100).floor
+      else
+        (orig_amount * 100).floor
+      end
+    end
+
+    @amount = convert_amount(orig_amount, @gift.currency)
   end
 
   # GET /gifts/new
