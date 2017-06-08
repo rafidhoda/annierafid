@@ -1,30 +1,18 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Amount:</strong>
-  <%= @gift.amount %>
-</p>
-
-<p>
-  <strong>Currency:</strong>
-  <%= @gift.currency %>
-</p>
-
-<%= form_tag charges_path(gift: @gift) do %>
+<%= form_tag charges_path do %>
   <article>
     <% if flash[:error].present? %>
       <div id="error_explanation">
         <p><%= flash[:error] %></p>
       </div>
     <% end %>
+    <label class="amount">
+      <span>Amount: $5.00</span>
+    </label>
   </article>
 
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
           data-description="A month's subscription"
-          data-amount="<%= @gift.amount %>"
+          data-amount="300"
           data-locale="auto"></script>
 <% end %>
-
-<%= link_to 'Edit', edit_gift_path(@gift) %> |
-<%= link_to 'Back', gifts_path %>

@@ -8,5 +8,8 @@ Rails.application.routes.draw do
 
   get 'visa' => 'pages#visa'
 
+  resources :charges
+  # post 'charges/:gift', to: 'charges#gift'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

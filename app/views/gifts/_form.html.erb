@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :currency %>
-    <%= form.text_field :currency, id: :gift_currency %>
+    <%= form.select :currency, [["RUB", "rub"], ["NOK", "nok"], ["GBP", "gbp"], ["USD", "usd"]], id: :gift_currency %>
   </div>
 
   <div class="actions">

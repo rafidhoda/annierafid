@@ -10,6 +10,11 @@ class GiftsController < ApplicationController
   # GET /gifts/1
   # GET /gifts/1.json
   def show
+    @response = HTTParty.get('http://api.fixer.io/latest?base=USD')
+
+    @exchange = JSON.parse(response.body)
+
+    @nok = @exchange['rates']['NOK']
   end
 
   # GET /gifts/new
