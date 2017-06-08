@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get 'rsvp', to: 'rsvps#new'
 
+  get 'gift', to: 'gifts#new'
+
   get 'visa' => 'pages#visa'
 
   resources :charges
