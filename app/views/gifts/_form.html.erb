@@ -1,3 +1,6 @@
+<div class="form_content_rsvp">
+  <h3 class="form_toptitle" id="Note"></h3>
+  <h3 class="form_subtitle">CHOOSE AMOUNT &amp; CURRENCY</h3>
 <%= form_with(model: gift, local: true) do |form| %>
   <% if gift.errors.any? %>
     <div id="error_explanation">
@@ -11,17 +14,31 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :amount %>
-    <%= form.number_field :amount, id: :gift_amount %>
-  </div>
+  <div class="form_section">
 
-  <div class="field">
-    <%= form.label :currency %>
-    <%= form.select :currency, [["RUB", "rub"], ["NOK", "nok"], ["GBP", "gbp"], ["USD", "usd"]], id: :gift_currency %>
-  </div>
+      <div class="left12">
+        <div class="form_row_full">
+      <label>AMOUNT (min 30 rubles)</label>
+      <%= form.number_field :amount, id: :gift_amount, class: 'form_input required' %>
+      </div>
+    </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+      <div class="left12_last">
+        <div class="form_row_full">
+        <label>CURRENCY</label>
+        <div class="select_container">
+        <%= form.select :currency, [["RUB", "rub"], ["NOK", "nok"], ["GBP", "gbp"], ["USD", "usd"]], id: :gift_currency %>
+        </div>
+        </div>
+      </div>
+
+      <div class="full_width">
+
+        <center>
+          <%= form.submit 'Proceed to Payment', class: 'form_submit_contact'  %>
+        </center>
+
+      </div>
+ </div>
 <% end %>
+</div>
