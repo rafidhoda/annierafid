@@ -30,6 +30,8 @@ class ChargesController < ApplicationController
       end
     end
 
+    @random_gif = ['gift0.gif', 'gift1.gif', 'gift2.gif', 'gift3.gif', 'gift4.gif'].shuffle.first
+
     @amount = convert_amount(@orig_amount, @gift.currency)
 
     customer = Stripe::Customer.create(
