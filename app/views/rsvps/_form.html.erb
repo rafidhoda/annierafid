@@ -1,42 +1,35 @@
-<%= form_with(model: rsvp, local: true) do |form| %>
-  <% if rsvp.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(rsvp.errors.count, "error") %> prohibited this rsvp from being saved:</h2>
+<div class="form_content_rsvp">
+      <h3 class="form_toptitle" id="Note"></h3>
+      <%= form_with(model: rsvp, local: true) do |form| %>
 
-      <ul>
-      <% rsvp.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+ <h3 class="form_subtitle">GUEST DETAILS &amp; COMMENTS</h3>
+      <div class="form_section">
+          <div class="form_row left14">
+          <label>FIRST NAME</label>
+          <%= form.text_field :first_name, id: :rsvp_first_name, class: 'form_input required', placeholder: 'Elon' %>
+          </div>
+          <div class="form_row left14">
+          <label>LAST NAME</label>
+          <%= form.text_field :last_name, id: :rsvp_last_name, class: 'form_input required', placeholder: 'Musk' %>
+          </div>
+          <div class="form_row left14">
+          <label>EMAIL</label>
+          <%= form.text_field :email, id: :rsvp_email, class: 'form_input required email', placeholder: 'elon@tesla.com' %>
+          </div>
+          <div class="form_row left14_last">
+          <label>PHONE</label>
+          <%= form.text_field :phone_number, id: :rsvp_phone_number, class: 'form_input required', placeholder: '+7 925 712 53 11' %>
+          </div>
+          <div class="form_row_full">
+          <label>OTHER COMMENTS</label>
+          <%= form.text_area :comments, id: :rsvp_comments, class: 'form_textarea_full', placeholder: 'Anything you\'d like us to know about? Write it here' %>
+          </div>
+          <div class="form_row">
+
+            <%= form.submit 'Send RSVP', class: 'form_submit_contact' %>
+
+          </div>
+     </div>
+
       <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name, id: :rsvp_first_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name, id: :rsvp_last_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email, id: :rsvp_email %>
-  </div>
-
-  <div class="field">
-    <%= form.label :phone_number %>
-    <%= form.text_field :phone_number, id: :rsvp_phone_number %>
-  </div>
-
-  <div class="field">
-    <%= form.label :comments %>
-    <%= form.text_area :comments, id: :rsvp_comments %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>
