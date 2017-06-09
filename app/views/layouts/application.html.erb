@@ -1,14 +1,57 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Annierafid</title>
+    <title>Annie & Rafid's Wedding</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link href='http://fonts.googleapis.com/css?family=Clicker+Script' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,900' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
   </head>
 
   <body>
+    <nav id="main_menu" class="menuwhite">
+    	<ul>
+    		<li><%= link_to 'HOME', root_path, class: 'selected fade-page' %></li>
+        <li><%= link_to 'LOCATION', root_path, class: 'fade-page' %></li>
+        <li><%= link_to 'GIVE A GIFT', '/gift', class: 'fade-page' %></li>
+        <li><%= link_to 'VISA', '/visa', class: 'fade-page' %></li>
+        <li><%= link_to 'PHOTOS', root_path, class: 'fade-page' %></li>
+        <li><%= link_to 'RSVP', '/rsvp', class: 'fade-page' %></li>
+    	</ul>
+    </nav>
     <%= yield %>
+    <div id="footer">
+     <div class="section_centered">
+
+       <div class="footer_centered_title">
+         <h2>ANNIE <span>and </span> RAFID</h2>
+       </div>
+
+       <div class="footer_rsvp">
+         <%= link_to 'RSVP NOW', '/rsvp', class: 'fade-page' %>
+       </div>
+
+    </div>
+    </div>
+
+    <script type="text/javascript">
+      $("#main_menu").menumaker({
+      format: "multitoggle",
+      sticky: true
+      });
+      </script>
+      <script type="text/javascript">
+      $( document ).ready(function() {
+          var isMobile = window.matchMedia("only screen and (max-width: 1300px)");
+
+          if (!isMobile.matches) {
+             $('.block').smoove({offset:'2%'});
+          }
+       });
+      </script>
   </body>
 </html>

@@ -1,2 +1,171 @@
-<h1>Annie and Rafid's Wedding</h1>
-<p>09.08.2017</p>
+<header class="header">
+
+
+        <div class="title_container">
+             <div class="title_up">Annie</div>
+             <div class="title_down">&amp;Rafid</div>
+             <div class="title_date">09.08.2017</div>
+        </div>
+
+</header>
+
+<button class="trigger downanimated bounce"><%= image_tag 'arrow-down.png' %></button>
+
+
+<div class="content">
+
+
+            <div id="about_home" class="section_centered">
+
+
+	   <div class="centered_title">
+				<h2>Annie<span> & </span>Rafid</h2>
+				<p class="under_title_descr"><span>We are getting married this August and you're invited!</span></p>
+            </div>
+
+
+
+               <div class="about_section">
+					 <div class="about_pic_container">
+
+						<div class="about_pic">
+              <%= image_tag 'together.jpg' %>
+            </div>
+					</div>
+						<h3>ANNIE & RAFID</h3>
+						<p style="text-align: left">The two of us met one late Febraury night over the internet. Our meeting was a pure coincidence. What started out as a casual conversation quickly turned into mutual affection. Over our long conversations together we came to understand that we were both perfect for each other. Marriage was always in the cards for both of us and so we decided not to delay and get married this August.</p>
+
+            <%= link_to 'Message Annie', 'https://www.facebook.com/annie.mushegyan', class: 'more_about fade-page' %>
+            <%= link_to 'Message Rafid', 'https://www.facebook.com/rafidhoda', class: 'more_about fade-page' %>
+
+               </div>
+
+            </div>
+
+	 <!-- End of Section About Us -->
+
+        <div id="countdown_home" class="countdown_container">
+				<div class="countdown_container_inner block" data-move-y="200px" data-move-x="0px">
+					<h2>WE'RE GETTING HITCHED: 09.08.2017</h2>
+          <center><%= image_tag 'up.gif', style: "max-width: 500px; width: 100%" %></center>
+          <h2 style="margin-top: 30px">WEDDING PARTY: 12.08.2017</h2>
+          <%= link_to 'RSVP', '/rsvp', class: 'countdown_rsvp fade-page' %>
+			</div>
+            </div>
+
+	 <!-- End of Section Countdown -->
+
+  <div class="section_centered">
+
+		<div class="centered_title">
+			<h2>Give<span> a </span>gift</h2>
+			<p class="under_title_descr"><span>Love is composed of a single soul inhabiting two bodies.</span></p>
+		</div>
+
+       <div class="about_section">
+           <p style="text-align: left">The best gift is your well wishes, but if you still want to give us something we have made it easy for you to do.<br><br> You can give monetary gift by clicking the button below.</p>
+
+           <%= link_to 'GIVE A GIFT', '/gift', class: 'countdown_rsvp fade-page' %>
+       </div>
+  </div>
+
+ <!-- End of Section Blog -->
+
+
+  <div class="carousel_container">
+	  <div class="section_centered">
+
+		<div class="centered_title">
+			<h2>BRIDEMAIDS <span>and</span> GROOMSMEN'S</h2>
+			<p class="under_title_descr"><span>Best Man &amp; Maid of Honor</span></p>
+		</div>
+
+		<div id="weddingcarousel" class="owl-carousel">
+			<div class="carousel14">
+				 <div class="carousel_pic_container">
+
+					 <div class="carousel_pic">
+             <%= image_tag 'bridemaids1.jpg' %>
+           </div>
+				 </div>
+				<h3>LAURA STEPHANSON</h3>
+				<p>Maid of Honor</p>
+			</div>
+			<div class="carousel14">
+				 <div class="carousel_pic_container">
+
+					 <div class="carousel_pic"><%= image_tag 'bridemaids2.jpg' %></div>
+				 </div>
+				<h3>LINDSEY REMY</h3>
+				<p>Bride Best Friend</p>
+			</div>
+			<div class="carousel14">
+				 <div class="carousel_pic_container">
+
+					 <div class="carousel_pic"><%= image_tag 'bridemaids3.jpg' %></div>
+				 </div>
+				<h3>ELIZABETH LYN</h3>
+				<p>Bride Sister</p>
+			</div>
+			<div class="carousel14">
+				 <div class="carousel_pic_container">
+
+					 <div class="carousel_pic"><%= image_tag 'bridemaids5.jpg' %></div>
+				 </div>
+				<h3>MAYA ELIOT</h3>
+				<p>Bride Friend</p>
+			</div>
+
+			<div class="carousel14">
+				 <div class="carousel_pic_container">
+
+					 <div class="carousel_pic"><%= image_tag 'bridemaids4.jpg' %></div>
+				 </div>
+				<h3>ELIZABETH LYN</h3>
+				<p>Bride Friend</p>
+			</div>
+			<div class="carousel14">
+				 <div class="carousel_pic_container">
+
+					 <div class="carousel_pic"><%= image_tag 'bridemaids6.jpg' %></div>
+				 </div>
+				<h3>MAYA ELIOT</h3>
+				<p>Best Friend</p>
+			</div>
+			<div class="carousel14">
+				 <div class="carousel_pic_container">
+
+					 <div class="carousel_pic"><%= image_tag 'groomsmen1.jpg' %></div>
+				 </div>
+				<h3>STEVE KAY</h3>
+				<p>Best Man</p>
+			</div>
+			<div class="carousel14">
+				 <div class="carousel_pic_container">
+
+					 <div class="carousel_pic"><%= image_tag 'groomsmen2.jpg' %></div>
+				 </div>
+				<h3>JOHN DOE</h3>
+				<p>Groom's Friend</p>
+			</div>
+		</div>
+
+	  </div>
+  </div>
+<!-- End of Section Bridemades -->
+
+            <div id="photos_home" class="section_full">
+
+		<div class="centered_title">
+		<h2>Visa Instructions</h2>
+		<p class="under_title_descr"><span>Are you coming from outside of Russia? Then you'll need a Visa.</span></p>
+		</div>
+
+        <div class="about_section">
+           <p style="text-align: left">Getting a visa to visit Russia is generally not an issue, but there are a couple of things you need to remember.<br><br>Go to the visa page for instructions by clicking the button below.</p>
+
+           <%= link_to 'VISA', '/visa', class: 'countdown_rsvp fade-page' %>
+       </div>
+
+		<div class="clear"></div>
+            </div>
