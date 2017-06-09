@@ -535,7 +535,7 @@
  	margin:20px 0 0 0;
  	color:#fff;
  	font-weight:700;
- 	background:url(icons/location_white.png) no-repeat left;
+ 	background:image-url('icons/location_white.png') no-repeat left;
  }
  .phone_row_white{
  	display:block;
@@ -547,7 +547,7 @@
  	margin:20px 0 0 0;
  	color:#fff;
  	font-weight:700;
- 	background:url(icons/phone_white.png) no-repeat left;
+ 	background:image-url('icons/phone_white.png') no-repeat left;
  }
  /*---------------------------*/
  /* 5-3. GIFTS BLOCK    	 */
@@ -743,7 +743,7 @@
  .trans_black{
  width:100%;
  height:100%;
- background: url(black_trans.png) repeat;
+ background: image-url('black_trans.png') repeat;
  position:absolute;
  z-index:99;
  }
@@ -1336,7 +1336,7 @@
  .blogentry ul.listing li{
  	padding:0 0 0 20px;
  	margin:10px 0;
- 	background:url(checked.png) no-repeat left center;
+ 	background:image-url('checked.png') no-repeat left center;
  }
  .post_tags{
  	padding:20px 0;
@@ -1689,7 +1689,7 @@
  	border-bottom:1px #e7e6e6 solid;
      overflow: hidden;
      background-color: #fff;
-     background: #fff url("arrowdown.gif") no-repeat 95% 50%;
+     background: #fff image-url("arrowdown.gif") no-repeat 95% 50%;
 
  }
  select.form_select{
