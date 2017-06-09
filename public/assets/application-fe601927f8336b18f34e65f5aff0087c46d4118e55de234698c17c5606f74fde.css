@@ -1,0 +1,3957 @@
+/*!
+ * animsition v4.0.1
+ * A simple and easy jQuery plugin for CSS animated page transitions.
+ * http://blivesta.github.io/animsition
+ * License : MIT
+ * Author : blivesta (http://blivesta.com/)
+ */
+.animsition,.animsition-overlay{position:relative;opacity:0;-webkit-animation-fill-mode:both;animation-fill-mode:both}.animsition-overlay-slide{position:fixed;z-index:1;width:100%;height:100%;background-color:#ddd}.animsition-loading,.animsition-loading:after{width:32px;height:32px;position:fixed;top:50%;left:50%;margin-top:-16px;margin-left:-16px;border-radius:50%;z-index:2}.animsition-loading{background-color:transparent;border-top:5px solid rgba(0,0,0,.2);border-right:5px solid rgba(0,0,0,.2);border-bottom:5px solid rgba(0,0,0,.2);border-left:5px solid #eee;-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-timing-function:linear;animation-timing-function:linear;-webkit-animation-duration:.8s;animation-duration:.8s;-webkit-animation-name:animsition-loading;animation-name:animsition-loading}@-webkit-keyframes animsition-loading{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@keyframes animsition-loading{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@-webkit-keyframes fade-in{0%{opacity:0}to{opacity:1}}@keyframes fade-in{0%{opacity:0}to{opacity:1}}.fade-in{-webkit-animation-name:fade-in;animation-name:fade-in}@-webkit-keyframes fade-out{0%{opacity:1}to{opacity:0}}@keyframes fade-out{0%{opacity:1}to{opacity:0}}.fade-out{-webkit-animation-name:fade-out;animation-name:fade-out}@-webkit-keyframes fade-in-up{0%{-webkit-transform:translateY(500px);transform:translateY(500px);opacity:0}to{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes fade-in-up{0%{-webkit-transform:translateY(500px);transform:translateY(500px);opacity:0}to{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}.fade-in-up{-webkit-animation-name:fade-in-up;animation-name:fade-in-up}@-webkit-keyframes fade-out-up{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}to{-webkit-transform:translateY(-500px);transform:translateY(-500px);opacity:0}}@keyframes fade-out-up{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}to{-webkit-transform:translateY(-500px);transform:translateY(-500px);opacity:0}}.fade-out-up{-webkit-animation-name:fade-out-up;animation-name:fade-out-up}@-webkit-keyframes fade-in-up-sm{0%{-webkit-transform:translateY(100px);transform:translateY(100px);opacity:0}to{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes fade-in-up-sm{0%{-webkit-transform:translateY(100px);transform:translateY(100px);opacity:0}to{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}.fade-in-up-sm{-webkit-animation-name:fade-in-up-sm;animation-name:fade-in-up-sm}@-webkit-keyframes fade-out-up-sm{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}to{-webkit-transform:translateY(-100px);transform:translateY(-100px);opacity:0}}@keyframes fade-out-up-sm{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}to{-webkit-transform:translateY(-100px);transform:translateY(-100px);opacity:0}}.fade-out-up-sm{-webkit-animation-name:fade-out-up-sm;animation-name:fade-out-up-sm}@-webkit-keyframes fade-in-up-lg{0%{-webkit-transform:translateY(1000px);transform:translateY(1000px);opacity:0}to{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes fade-in-up-lg{0%{-webkit-transform:translateY(1000px);transform:translateY(1000px);opacity:0}to{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}.fade-in-up-lg{-webkit-animation-name:fade-in-up-lg;animation-name:fade-in-up-lg}@-webkit-keyframes fade-out-up-lg{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}to{-webkit-transform:translateY(-1000px);transform:translateY(-1000px);opacity:0}}@keyframes fade-out-up-lg{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}to{-webkit-transform:translateY(-1000px);transform:translateY(-1000px);opacity:0}}.fade-out-up-lg{-webkit-animation-name:fade-out-up-lg;animation-name:fade-out-up-lg}@-webkit-keyframes fade-in-down{0%{-webkit-transform:translateY(-500px);transform:translateY(-500px);opacity:0}to{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes fade-in-down{0%{-webkit-transform:translateY(-500px);transform:translateY(-500px);opacity:0}to{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}.fade-in-down{-webkit-animation-name:fade-in-down;animation-name:fade-in-down}@-webkit-keyframes fade-out-down{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}to{-webkit-transform:translateY(500px);transform:translateY(500px);opacity:0}}@keyframes fade-out-down{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}to{-webkit-transform:translateY(500px);transform:translateY(500px);opacity:0}}.fade-out-down{-webkit-animation-name:fade-out-down;animation-name:fade-out-down}@-webkit-keyframes fade-in-down-sm{0%{-webkit-transform:translateY(-100px);transform:translateY(-100px);opacity:0}to{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes fade-in-down-sm{0%{-webkit-transform:translateY(-100px);transform:translateY(-100px);opacity:0}to{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}.fade-in-down-sm{-webkit-animation-name:fade-in-down-sm;animation-name:fade-in-down-sm}@-webkit-keyframes fade-out-down-sm{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}to{-webkit-transform:translateY(100px);transform:translateY(100px);opacity:0}}@keyframes fade-out-down-sm{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}to{-webkit-transform:translateY(100px);transform:translateY(100px);opacity:0}}.fade-out-down-sm{-webkit-animation-name:fade-out-down-sm;animation-name:fade-out-down-sm}.fade-in-down-lg{-webkit-animation-name:fade-in-down;animation-name:fade-in-down}@-webkit-keyframes fade-out-down-lg{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}to{-webkit-transform:translateY(1000px);transform:translateY(1000px);opacity:0}}@keyframes fade-out-down-lg{0%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}to{-webkit-transform:translateY(1000px);transform:translateY(1000px);opacity:0}}.fade-out-down-lg{-webkit-animation-name:fade-out-down-lg;animation-name:fade-out-down-lg}@-webkit-keyframes fade-in-left{0%{-webkit-transform:translateX(-500px);transform:translateX(-500px);opacity:0}to{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}@keyframes fade-in-left{0%{-webkit-transform:translateX(-500px);transform:translateX(-500px);opacity:0}to{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}.fade-in-left{-webkit-animation-name:fade-in-left;animation-name:fade-in-left}@-webkit-keyframes fade-out-left{0%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}to{-webkit-transform:translateX(-500px);transform:translateX(-500px);opacity:0}}@keyframes fade-out-left{0%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}to{-webkit-transform:translateX(-500px);transform:translateX(-500px);opacity:0}}.fade-out-left{-webkit-animation-name:fade-out-left;animation-name:fade-out-left}@-webkit-keyframes fade-in-left-sm{0%{-webkit-transform:translateX(-100px);transform:translateX(-100px);opacity:0}to{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}@keyframes fade-in-left-sm{0%{-webkit-transform:translateX(-100px);transform:translateX(-100px);opacity:0}to{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}.fade-in-left-sm{-webkit-animation-name:fade-in-left-sm;animation-name:fade-in-left-sm}@-webkit-keyframes fade-out-left-sm{0%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}to{-webkit-transform:translateX(-100px);transform:translateX(-100px);opacity:0}}@keyframes fade-out-left-sm{0%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}to{-webkit-transform:translateX(-100px);transform:translateX(-100px);opacity:0}}.fade-out-left-sm{-webkit-animation-name:fade-out-left-sm;animation-name:fade-out-left-sm}@-webkit-keyframes fade-in-left-lg{0%{-webkit-transform:translateX(-1500px);transform:translateX(-1500px);opacity:0}to{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}@keyframes fade-in-left-lg{0%{-webkit-transform:translateX(-1500px);transform:translateX(-1500px);opacity:0}to{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}.fade-in-left-lg{-webkit-animation-name:fade-in-left-lg;animation-name:fade-in-left-lg}@-webkit-keyframes fade-out-left-lg{0%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}to{-webkit-transform:translateX(-1500px);transform:translateX(-1500px);opacity:0}}@keyframes fade-out-left-lg{0%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}to{-webkit-transform:translateX(-1500px);transform:translateX(-1500px);opacity:0}}.fade-out-left-lg{-webkit-animation-name:fade-out-left-lg;animation-name:fade-out-left-lg}@-webkit-keyframes fade-in-right{0%{-webkit-transform:translateX(500px);transform:translateX(500px);opacity:0}to{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}@keyframes fade-in-right{0%{-webkit-transform:translateX(500px);transform:translateX(500px);opacity:0}to{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}.fade-in-right{-webkit-animation-name:fade-in-right;animation-name:fade-in-right}@-webkit-keyframes fade-out-right{0%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}to{-webkit-transform:translateX(500px);transform:translateX(500px);opacity:0}}@keyframes fade-out-right{0%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}to{-webkit-transform:translateX(500px);transform:translateX(500px);opacity:0}}.fade-out-right{-webkit-animation-name:fade-out-right;animation-name:fade-out-right}@-webkit-keyframes fade-in-right-sm{0%{-webkit-transform:translateX(100px);transform:translateX(100px);opacity:0}to{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}@keyframes fade-in-right-sm{0%{-webkit-transform:translateX(100px);transform:translateX(100px);opacity:0}to{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}.fade-in-right-sm{-webkit-animation-name:fade-in-right-sm;animation-name:fade-in-right-sm}@-webkit-keyframes fade-out-right-sm{0%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}to{-webkit-transform:translateX(100px);transform:translateX(100px);opacity:0}}@keyframes fade-out-right-sm{0%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}to{-webkit-transform:translateX(100px);transform:translateX(100px);opacity:0}}.fade-out-right-sm{-webkit-animation-name:fade-out-right-sm;animation-name:fade-out-right-sm}@-webkit-keyframes fade-in-right-lg{0%{-webkit-transform:translateX(1500px);transform:translateX(1500px);opacity:0}to{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}@keyframes fade-in-right-lg{0%{-webkit-transform:translateX(1500px);transform:translateX(1500px);opacity:0}to{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}.fade-in-right-lg{-webkit-animation-name:fade-in-right-lg;animation-name:fade-in-right-lg}@-webkit-keyframes fade-out-right-lg{0%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}to{-webkit-transform:translateX(1500px);transform:translateX(1500px);opacity:0}}@keyframes fade-out-right-lg{0%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}to{-webkit-transform:translateX(1500px);transform:translateX(1500px);opacity:0}}.fade-out-right-lg{-webkit-animation-name:fade-out-right-lg;animation-name:fade-out-right-lg}@-webkit-keyframes rotate-in{0%{-webkit-transform:rotate(-90deg);transform:rotate(-90deg);transform-origin:center center;opacity:0}0%,to{-webkit-transform-origin:center center}to{-webkit-transform:rotate(0);transform:rotate(0);transform-origin:center center;opacity:1}}@keyframes rotate-in{0%{-webkit-transform:rotate(-90deg);transform:rotate(-90deg);transform-origin:center center;opacity:0}0%,to{-webkit-transform-origin:center center}to{-webkit-transform:rotate(0);transform:rotate(0);transform-origin:center center;opacity:1}}.rotate-in{-webkit-animation-name:rotate-in;animation-name:rotate-in}@-webkit-keyframes rotate-out{0%{-webkit-transform:rotate(0);transform:rotate(0);transform-origin:center center;opacity:1}0%,to{-webkit-transform-origin:center center}to{-webkit-transform:rotate(90deg);transform:rotate(90deg);transform-origin:center center;opacity:0}}@keyframes rotate-out{0%{-webkit-transform:rotate(0);transform:rotate(0);transform-origin:center center;opacity:1}0%,to{-webkit-transform-origin:center center}to{-webkit-transform:rotate(90deg);transform:rotate(90deg);transform-origin:center center;opacity:0}}.rotate-out{-webkit-animation-name:rotate-out;animation-name:rotate-out}@-webkit-keyframes rotate-in-sm{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg);transform-origin:center center;opacity:0}0%,to{-webkit-transform-origin:center center}to{-webkit-transform:rotate(0);transform:rotate(0);transform-origin:center center;opacity:1}}@keyframes rotate-in-sm{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg);transform-origin:center center;opacity:0}0%,to{-webkit-transform-origin:center center}to{-webkit-transform:rotate(0);transform:rotate(0);transform-origin:center center;opacity:1}}.rotate-in-sm{-webkit-animation-name:rotate-in-sm;animation-name:rotate-in-sm}@-webkit-keyframes rotate-out-sm{0%{-webkit-transform:rotate(0);transform:rotate(0);transform-origin:center center;opacity:1}0%,to{-webkit-transform-origin:center center}to{-webkit-transform:rotate(45deg);transform:rotate(45deg);transform-origin:center center;opacity:0}}@keyframes rotate-out-sm{0%{-webkit-transform:rotate(0);transform:rotate(0);transform-origin:center center;opacity:1}0%,to{-webkit-transform-origin:center center}to{-webkit-transform:rotate(45deg);transform:rotate(45deg);transform-origin:center center;opacity:0}}.rotate-out-sm{-webkit-animation-name:rotate-out-sm;animation-name:rotate-out-sm}@-webkit-keyframes rotate-in-lg{0%{-webkit-transform:rotate(-180deg);transform:rotate(-180deg);transform-origin:center center;opacity:0}0%,to{-webkit-transform-origin:center center}to{-webkit-transform:rotate(0);transform:rotate(0);transform-origin:center center;opacity:1}}@keyframes rotate-in-lg{0%{-webkit-transform:rotate(-180deg);transform:rotate(-180deg);transform-origin:center center;opacity:0}0%,to{-webkit-transform-origin:center center}to{-webkit-transform:rotate(0);transform:rotate(0);transform-origin:center center;opacity:1}}.rotate-in-lg{-webkit-animation-name:rotate-in-lg;animation-name:rotate-in-lg}@-webkit-keyframes rotate-out-lg{0%{-webkit-transform:rotate(0);transform:rotate(0);transform-origin:center center;opacity:1}0%,to{-webkit-transform-origin:center center}to{-webkit-transform:rotate(180deg);transform:rotate(180deg);transform-origin:center center;opacity:0}}@keyframes rotate-out-lg{0%{-webkit-transform:rotate(0);transform:rotate(0);transform-origin:center center;opacity:1}0%,to{-webkit-transform-origin:center center}to{-webkit-transform:rotate(180deg);transform:rotate(180deg);transform-origin:center center;opacity:0}}.rotate-out-lg{-webkit-animation-name:rotate-out-lg;animation-name:rotate-out-lg}@-webkit-keyframes flip-in-x{0%{-webkit-transform:perspective(550px) rotateX(90deg);transform:perspective(550px) rotateX(90deg);opacity:0}to{-webkit-transform:perspective(550px) rotateX(0deg);transform:perspective(550px) rotateX(0deg);opacity:1}}@keyframes flip-in-x{0%{-webkit-transform:perspective(550px) rotateX(90deg);transform:perspective(550px) rotateX(90deg);opacity:0}to{-webkit-transform:perspective(550px) rotateX(0deg);transform:perspective(550px) rotateX(0deg);opacity:1}}.flip-in-x{-webkit-animation-name:flip-in-x;animation-name:flip-in-x;-webkit-backface-visibility:visible!important;backface-visibility:visible!important}@-webkit-keyframes flip-out-x{0%{-webkit-transform:perspective(550px) rotateX(0deg);transform:perspective(550px) rotateX(0deg);opacity:1}to{-webkit-transform:perspective(550px) rotateX(90deg);transform:perspective(550px) rotateX(90deg);opacity:0}}@keyframes flip-out-x{0%{-webkit-transform:perspective(550px) rotateX(0deg);transform:perspective(550px) rotateX(0deg);opacity:1}to{-webkit-transform:perspective(550px) rotateX(90deg);transform:perspective(550px) rotateX(90deg);opacity:0}}.flip-out-x{-webkit-animation-name:flip-out-x;animation-name:flip-out-x;-webkit-backface-visibility:visible!important;backface-visibility:visible!important}@-webkit-keyframes flip-in-x-nr{0%{-webkit-transform:perspective(100px) rotateX(90deg);transform:perspective(100px) rotateX(90deg);opacity:0}to{-webkit-transform:perspective(100px) rotateX(0deg);transform:perspective(100px) rotateX(0deg);opacity:1}}@keyframes flip-in-x-nr{0%{-webkit-transform:perspective(100px) rotateX(90deg);transform:perspective(100px) rotateX(90deg);opacity:0}to{-webkit-transform:perspective(100px) rotateX(0deg);transform:perspective(100px) rotateX(0deg);opacity:1}}.flip-in-x-nr{-webkit-animation-name:flip-in-x-nr;animation-name:flip-in-x-nr;-webkit-backface-visibility:visible!important;backface-visibility:visible!important}@-webkit-keyframes flip-out-x-nr{0%{-webkit-transform:perspective(100px) rotateX(0deg);transform:perspective(100px) rotateX(0deg);opacity:1}to{-webkit-transform:perspective(100px) rotateX(90deg);transform:perspective(100px) rotateX(90deg);opacity:0}}@keyframes flip-out-x-nr{0%{-webkit-transform:perspective(100px) rotateX(0deg);transform:perspective(100px) rotateX(0deg);opacity:1}to{-webkit-transform:perspective(100px) rotateX(90deg);transform:perspective(100px) rotateX(90deg);opacity:0}}.flip-out-x-nr{-webkit-animation-name:flip-out-x-nr;animation-name:flip-out-x-nr;-webkit-backface-visibility:visible!important;backface-visibility:visible!important}@-webkit-keyframes flip-in-x-fr{0%{-webkit-transform:perspective(1000px) rotateX(90deg);transform:perspective(1000px) rotateX(90deg);opacity:0}to{-webkit-transform:perspective(1000px) rotateX(0deg);transform:perspective(1000px) rotateX(0deg);opacity:1}}@keyframes flip-in-x-fr{0%{-webkit-transform:perspective(1000px) rotateX(90deg);transform:perspective(1000px) rotateX(90deg);opacity:0}to{-webkit-transform:perspective(1000px) rotateX(0deg);transform:perspective(1000px) rotateX(0deg);opacity:1}}.flip-in-x-fr{-webkit-animation-name:flip-in-x-fr;animation-name:flip-in-x-fr;-webkit-backface-visibility:visible!important;backface-visibility:visible!important}@-webkit-keyframes flip-out-x-fr{0%{-webkit-transform:perspective(1000px) rotateX(0deg);transform:perspective(1000px) rotateX(0deg);opacity:1}to{-webkit-transform:perspective(1000px) rotateX(90deg);transform:perspective(1000px) rotateX(90deg);opacity:0}}@keyframes flip-out-x-fr{0%{-webkit-transform:perspective(1000px) rotateX(0deg);transform:perspective(1000px) rotateX(0deg);opacity:1}to{-webkit-transform:perspective(1000px) rotateX(90deg);transform:perspective(1000px) rotateX(90deg);opacity:0}}.flip-out-x-fr{-webkit-animation-name:flip-out-x-fr;animation-name:flip-out-x-fr;-webkit-backface-visibility:visible!important;backface-visibility:visible!important}@-webkit-keyframes flip-in-y{0%{-webkit-transform:perspective(550px) rotateY(90deg);transform:perspective(550px) rotateY(90deg);opacity:0}to{-webkit-transform:perspective(550px) rotateY(0deg);transform:perspective(550px) rotateY(0deg);opacity:1}}@keyframes flip-in-y{0%{-webkit-transform:perspective(550px) rotateY(90deg);transform:perspective(550px) rotateY(90deg);opacity:0}to{-webkit-transform:perspective(550px) rotateY(0deg);transform:perspective(550px) rotateY(0deg);opacity:1}}.flip-in-y{-webkit-animation-name:flip-in-y;animation-name:flip-in-y;-webkit-backface-visibility:visible!important;backface-visibility:visible!important}@-webkit-keyframes flip-out-y{0%{-webkit-transform:perspective(550px) rotateY(0deg);transform:perspective(550px) rotateY(0deg);opacity:1}to{-webkit-transform:perspective(550px) rotateY(90deg);transform:perspective(550px) rotateY(90deg);opacity:0}}@keyframes flip-out-y{0%{-webkit-transform:perspective(550px) rotateY(0deg);transform:perspective(550px) rotateY(0deg);opacity:1}to{-webkit-transform:perspective(550px) rotateY(90deg);transform:perspective(550px) rotateY(90deg);opacity:0}}.flip-out-y{-webkit-animation-name:flip-out-y;animation-name:flip-out-y;-webkit-backface-visibility:visible!important;backface-visibility:visible!important}@-webkit-keyframes flip-in-y-nr{0%{-webkit-transform:perspective(100px) rotateY(90deg);transform:perspective(100px) rotateY(90deg);opacity:0}to{-webkit-transform:perspective(100px) rotateY(0deg);transform:perspective(100px) rotateY(0deg);opacity:1}}@keyframes flip-in-y-nr{0%{-webkit-transform:perspective(100px) rotateY(90deg);transform:perspective(100px) rotateY(90deg);opacity:0}to{-webkit-transform:perspective(100px) rotateY(0deg);transform:perspective(100px) rotateY(0deg);opacity:1}}.flip-in-y-nr{-webkit-animation-name:flip-in-y-nr;animation-name:flip-in-y-nr;-webkit-backface-visibility:visible!important;backface-visibility:visible!important}@-webkit-keyframes flip-out-y-nr{0%{-webkit-transform:perspective(100px) rotateY(0deg);transform:perspective(100px) rotateY(0deg);opacity:1}to{-webkit-transform:perspective(100px) rotateY(90deg);transform:perspective(100px) rotateY(90deg);opacity:0}}@keyframes flip-out-y-nr{0%{-webkit-transform:perspective(100px) rotateY(0deg);transform:perspective(100px) rotateY(0deg);opacity:1}to{-webkit-transform:perspective(100px) rotateY(90deg);transform:perspective(100px) rotateY(90deg);opacity:0}}.flip-out-y-nr{-webkit-animation-name:flip-out-y-nr;animation-name:flip-out-y-nr;-webkit-backface-visibility:visible!important;backface-visibility:visible!important}@-webkit-keyframes flip-in-y-fr{0%{-webkit-transform:perspective(1000px) rotateY(90deg);transform:perspective(1000px) rotateY(90deg);opacity:0}to{-webkit-transform:perspective(1000px) rotateY(0deg);transform:perspective(1000px) rotateY(0deg);opacity:1}}@keyframes flip-in-y-fr{0%{-webkit-transform:perspective(1000px) rotateY(90deg);transform:perspective(1000px) rotateY(90deg);opacity:0}to{-webkit-transform:perspective(1000px) rotateY(0deg);transform:perspective(1000px) rotateY(0deg);opacity:1}}.flip-in-y-fr{-webkit-animation-name:flip-in-y-fr;animation-name:flip-in-y-fr;-webkit-backface-visibility:visible!important;backface-visibility:visible!important}@-webkit-keyframes flip-out-y-fr{0%{-webkit-transform:perspective(1000px) rotateY(0deg);transform:perspective(1000px) rotateY(0deg);opacity:1}to{-webkit-transform:perspective(1000px) rotateY(90deg);transform:perspective(1000px) rotateY(90deg);opacity:0}}@keyframes flip-out-y-fr{0%{-webkit-transform:perspective(1000px) rotateY(0deg);transform:perspective(1000px) rotateY(0deg);opacity:1}to{-webkit-transform:perspective(1000px) rotateY(90deg);transform:perspective(1000px) rotateY(90deg);opacity:0}}.flip-out-y-fr{-webkit-animation-name:flip-out-y-fr;animation-name:flip-out-y-fr;-webkit-backface-visibility:visible!important;backface-visibility:visible!important}@-webkit-keyframes zoom-in{0%{-webkit-transform:scale(.7);transform:scale(.7);opacity:0}to{opacity:1}}@keyframes zoom-in{0%{-webkit-transform:scale(.7);transform:scale(.7);opacity:0}to{opacity:1}}.zoom-in{-webkit-animation-name:zoom-in;animation-name:zoom-in}@-webkit-keyframes zoom-out{0%{-webkit-transform:scale(1);transform:scale(1);opacity:1}50%{-webkit-transform:scale(.7);transform:scale(.7)}50%,to{opacity:0}}@keyframes zoom-out{0%{-webkit-transform:scale(1);transform:scale(1);opacity:1}50%{-webkit-transform:scale(.7);transform:scale(.7)}50%,to{opacity:0}}.zoom-out{-webkit-animation-name:zoom-out;animation-name:zoom-out}@-webkit-keyframes zoom-in-sm{0%{-webkit-transform:scale(.95);transform:scale(.95);opacity:0}to{opacity:1}}@keyframes zoom-in-sm{0%{-webkit-transform:scale(.95);transform:scale(.95);opacity:0}to{opacity:1}}.zoom-in-sm{-webkit-animation-name:zoom-in-sm;animation-name:zoom-in-sm}@-webkit-keyframes zoom-out-sm{0%{-webkit-transform:scale(1);transform:scale(1);opacity:1}50%{-webkit-transform:scale(.95);transform:scale(.95)}50%,to{opacity:0}}@keyframes zoom-out-sm{0%{-webkit-transform:scale(1);transform:scale(1);opacity:1}50%{-webkit-transform:scale(.95);transform:scale(.95)}50%,to{opacity:0}}.zoom-out-sm{-webkit-animation-name:zoom-out-sm;animation-name:zoom-out-sm}@-webkit-keyframes zoom-in-lg{0%{-webkit-transform:scale(.4);transform:scale(.4);opacity:0}to{opacity:1}}@keyframes zoom-in-lg{0%{-webkit-transform:scale(.4);transform:scale(.4);opacity:0}to{opacity:1}}.zoom-in-lg{-webkit-animation-name:zoom-in-lg;animation-name:zoom-in-lg}@-webkit-keyframes zoom-out-lg{0%{-webkit-transform:scale(1);transform:scale(1);opacity:1}50%{-webkit-transform:scale(.4);transform:scale(.4)}50%,to{opacity:0}}@keyframes zoom-out-lg{0%{-webkit-transform:scale(1);transform:scale(1);opacity:1}50%{-webkit-transform:scale(.4);transform:scale(.4)}50%,to{opacity:0}}.zoom-out-lg{-webkit-animation-name:zoom-out-lg;animation-name:zoom-out-lg}@-webkit-keyframes overlay-slide-in-top{0%{height:100%}to{height:0}}@keyframes overlay-slide-in-top{0%{height:100%}to{height:0}}.overlay-slide-in-top{top:0;height:0;-webkit-animation-name:overlay-slide-in-top;animation-name:overlay-slide-in-top}@-webkit-keyframes overlay-slide-out-top{0%{height:0}to{height:100%}}@keyframes overlay-slide-out-top{0%{height:0}to{height:100%}}.overlay-slide-out-top{top:0;height:100%;-webkit-animation-name:overlay-slide-out-top;animation-name:overlay-slide-out-top}@-webkit-keyframes overlay-slide-in-bottom{0%{height:100%}to{height:0}}@keyframes overlay-slide-in-bottom{0%{height:100%}to{height:0}}.overlay-slide-in-bottom{bottom:0;height:0;-webkit-animation-name:overlay-slide-in-bottom;animation-name:overlay-slide-in-bottom}@-webkit-keyframes overlay-slide-out-bottom{0%{height:0}to{height:100%}}@keyframes overlay-slide-out-bottom{0%{height:0}to{height:100%}}.overlay-slide-out-bottom{bottom:0;height:100%;-webkit-animation-name:overlay-slide-out-bottom;animation-name:overlay-slide-out-bottom}@-webkit-keyframes overlay-slide-in-left{0%{width:100%}to{width:0}}@keyframes overlay-slide-in-left{0%{width:100%}to{width:0}}.overlay-slide-in-left{width:0;-webkit-animation-name:overlay-slide-in-left;animation-name:overlay-slide-in-left}@-webkit-keyframes overlay-slide-out-left{0%{width:0}to{width:100%}}@keyframes overlay-slide-out-left{0%{width:0}to{width:100%}}.overlay-slide-out-left{left:0;width:100%;-webkit-animation-name:overlay-slide-out-left;animation-name:overlay-slide-out-left}@-webkit-keyframes overlay-slide-in-right{0%{width:100%}to{width:0}}@keyframes overlay-slide-in-right{0%{width:100%}to{width:0}}.overlay-slide-in-right{right:0;width:0;-webkit-animation-name:overlay-slide-in-right;animation-name:overlay-slide-in-right}@-webkit-keyframes overlay-slide-out-right{0%{width:0}to{width:100%}}@keyframes overlay-slide-out-right{0%{width:0}to{width:100%}}.overlay-slide-out-right{right:0;width:100%;-webkit-animation-name:overlay-slide-out-right;animation-name:overlay-slide-out-right}
+
+/* Trigger Button */
+
+button.trigger {
+	position: fixed;
+	bottom: 10px;
+	left: 50%;
+	z-index: 5000;
+	display: block;
+	margin-left: -0.6em;
+	padding: 0;
+	width: 1em;
+	height: 1em;
+	border: none;
+	background: transparent;
+	color: transparent;
+	font-size: 2em;
+	cursor: pointer;
+}
+.container:not(.notrans) button.trigger {
+	-webkit-transition: opacity 0.3s 0.5s;
+	transition: opacity 0.3s 0.5s;
+}
+.container.modify:not(.notrans) button.trigger {
+	opacity: 0;
+	pointer-events: none;
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+button.trigger::before {
+	position: absolute;
+	bottom: 100%;
+	left: -100%;
+	padding: 0;
+	width: 300%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+button.trigger:focus {
+	outline: none;
+}
+.downanimated { 
+    -webkit-animation-duration: 1.5s; 
+    animation-duration: 1.5s; 
+    -webkit-animation-fill-mode: both; 
+    animation-fill-mode: both; 
+    -webkit-animation-timing-function: ease-out; 
+    animation-timing-function: ease-out; 
+    animation-iteration-count:infinite; 
+    -webkit-animation-iteration-count:infinite; 
+} 
+@-webkit-keyframes bounce { 
+    0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);} 
+    40% {-webkit-transform: translateY(-30px);} 
+    60% {-webkit-transform: translateY(-15px);} 
+} 
+@keyframes bounce { 
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+    40% {transform: translateY(-30px);} 
+    60% {transform: translateY(-15px);} 
+} 
+.bounce { 
+    -webkit-animation-name: bounce; 
+    animation-name: bounce; 
+}
+/* Content */
+.content {
+	margin:0 auto;
+	padding:0;
+}
+.content > div:not(.title) p {
+	margin: 0 auto 1.5em auto;
+}
+.content > div:not(.title) p:first-child {
+	font-size: 1.35em;
+}
+
+/* -------------------------- */
+/* Push */
+/* -------------------------- */
+.intro-effect-push:not(.notrans) .header,
+.intro-effect-push:not(.notrans) .content > div {
+	-webkit-transition-property: opacity, -webkit-transform;
+	transition-property: opacity, transform;
+	-webkit-transition-duration: 1s;
+	transition-duration: 1s;
+}
+.intro-effect-push:not(.notrans) .header {
+	-webkit-transition-timing-function: linear(0.7,0,0.3,1);
+	transition-timing-function: linear(0.7,0,0.3,1);
+	-webkit-transition-duration: 1.2s;
+	transition-duration: 1.2s;
+}
+.intro-effect-push .header {
+	position: absolute;
+	z-index: 1500;
+	margin:0 0 0 0;
+}
+.intro-effect-push .content > div {
+	margin-top: 0px;
+}
+.intro-effect-push .content > div {
+	-webkit-transform: translateY(400px);
+	transform: translateY(400px);
+	opacity: 0;
+}
+.intro-effect-push.modify .content > div {
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+	opacity: 1;
+}
+.intro-effect-push.modify .header {
+	opacity: 0;
+	-webkit-transform: translateY(-100%) scale(1);
+	transform: translateY(-100%) scale(1);
+}
+.intro-effect-push.modify:not(.notrans) .content > div {
+	-webkit-transition-delay: 0.6s;
+	transition-delay: 0.6s;
+}
+/* 
+ * 	Core Owl Carousel CSS File
+ *	v1.3.3
+ */
+
+/* clearfix */
+
+.owl-carousel .owl-wrapper:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+/* display none until init */
+.owl-carousel{
+	display: none;
+	position: relative;
+	width: 100%;
+	height:100%;
+	-ms-touch-action: pan-y;
+}
+.owl-carousel .owl-wrapper{
+	display: none;
+	position: relative;
+	-webkit-transform: translate3d(0px, 0px, 0px);
+	height: 100%;
+}
+.owl-carousel .owl-wrapper-outer{
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 100% !important; 
+}
+.owl-carousel .owl-wrapper-outer.autoHeight{
+	-webkit-transition: height 500ms ease-in-out;
+	-moz-transition: height 500ms ease-in-out;
+	-ms-transition: height 500ms ease-in-out;
+	-o-transition: height 500ms ease-in-out;
+	transition: height 500ms ease-in-out;
+}
+	
+.owl-carousel .owl-item{
+	float: left;
+	height: 100%;
+}
+
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div{
+	cursor: pointer;
+}
+.owl-controls {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	position:absolute;
+	bottom:20%;
+	z-index:9999;
+}
+
+/* mouse grab icon */
+.grabbing { 
+    cursor:url(grabbing.png) 8 8, move;
+}
+
+/* fix */
+.owl-carousel  .owl-wrapper,
+.owl-carousel  .owl-item{
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility:    hidden;
+	-ms-backface-visibility:     hidden;
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+}
+
+/*
+* 	Owl Carousel Owl Demo Theme 
+*	v1.3.3
+*/
+
+
+.owl-theme .owl-controls{
+	text-align: center;
+	width:100%;
+}
+
+/* Styling Next and Prev buttons */
+
+.owl-theme .owl-controls .owl-buttons div{
+	color: #FFF;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;/*IE7 life-saver */
+	margin: 5px;
+	padding: 3px 10px;
+	font-size: 12px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	background: #869791;
+	filter: Alpha(Opacity=100);/*IE7 fix*/
+	opacity: 1;
+}
+/* Clickable class fix problem with hover on touch devices */
+/* Use it for non-touch hover action */
+.owl-theme .owl-controls.clickable .owl-buttons div:hover{
+	filter: Alpha(Opacity=100);/*IE7 fix*/
+	opacity: 1;
+	text-decoration: none;
+}
+
+/* Styling Pagination*/
+
+.owl-theme .owl-controls .owl-page{
+	display: inline-block;
+	zoom: 1;
+	*display: inline;/*IE7 life-saver */
+}
+.owl-theme .owl-controls .owl-page span{
+	display: block;
+	width: 10px;
+	height: 10px;
+	margin: 5px 5px;
+	filter: Alpha(Opacity=60);/*IE7 fix*/
+	opacity: 0.6;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	border:1px #fff solid;
+	
+}
+
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span{
+	filter: Alpha(Opacity=100);/*IE7 fix*/
+	opacity: 1;
+	background: #fff;
+}
+
+/* If PaginationNumbers is true */
+
+.owl-theme .owl-controls .owl-page span.owl-numbers{
+	height: auto;
+	width: auto;
+	color: #FFF;
+	padding: 2px 10px;
+	font-size: 12px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+
+/* preloading images */
+.owl-item.loading{
+	min-height: 150px;
+	background: url(AjaxLoader.gif) no-repeat center center
+}
+/*
+* 	Owl Carousel Owl Demo Theme 
+*	v1.3.3
+*/
+
+
+.owl-themecarousel .owl-controls{
+	text-align: center;
+	width:100%;
+	bottom: -40px;
+}
+
+/* Styling Next and Prev buttons */
+
+.owl-themecarousel .owl-controls .owl-buttons div{
+	color: #000;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;/*IE7 life-saver */
+	margin: 5px;
+	padding: 3px 3px;
+	font-size: 12px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	background: #869791;
+	filter: Alpha(Opacity=100);/*IE7 fix*/
+	opacity: 1;
+}
+/* Clickable class fix problem with hover on touch devices */
+/* Use it for non-touch hover action */
+.owl-themecarousel .owl-controls.clickable .owl-buttons div:hover{
+	filter: Alpha(Opacity=100);/*IE7 fix*/
+	opacity: 1;
+	text-decoration: none;
+}
+
+/* Styling Pagination*/
+
+.owl-themecarousel .owl-controls .owl-page{
+	display: inline-block;
+	zoom: 1;
+	*display: inline;/*IE7 life-saver */
+}
+.owl-themecarousel .owl-controls .owl-page span{
+	display: block;
+	width: 10px;
+	height: 10px;
+	margin: 5px 5px;
+	filter: Alpha(Opacity=60);/*IE7 fix*/
+	opacity: 0.6;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	border:1px #e76b71 solid;
+	
+}
+
+.owl-themecarousel .owl-controls .owl-page.active span,
+.owl-themecarousel .owl-controls.clickable .owl-page:hover span{
+	filter: Alpha(Opacity=100);/*IE7 fix*/
+	opacity: 1;
+	background: #e76b71;
+}
+
+/* If PaginationNumbers is true */
+
+.owl-themecarousel .owl-controls .owl-page span.owl-numbers{
+	height: auto;
+	width: auto;
+	color: #FFF;
+	padding: 2px 10px;
+	font-size: 12px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+
+/* preloading images */
+.owl-item.loading{
+	min-height: 150px;
+	background: url(AjaxLoader.gif) no-repeat center center
+}
+/* 
+ *  Owl Carousel CSS3 Transitions 
+ *  v1.3.2
+ */
+
+
+.owl-origin {
+	-webkit-perspective: 1200px;
+	-webkit-perspective-origin-x : 50%;
+	-webkit-perspective-origin-y : 50%;
+	-moz-perspective : 1200px;
+	-moz-perspective-origin-x : 50%;
+	-moz-perspective-origin-y : 50%;
+	perspective : 1200px;
+}
+/* fade */
+.owl-fade-out {
+  z-index: 10;
+  -webkit-animation: fadeOut .7s both ease;
+  -moz-animation: fadeOut .7s both ease;
+  animation: fadeOut .7s both ease;
+}
+.owl-fade-in {
+  -webkit-animation: fadeIn .7s both ease;
+  -moz-animation: fadeIn .7s both ease;
+  animation: fadeIn .7s both ease;
+}
+/* backSlide */
+.owl-backSlide-out {
+  -webkit-animation: backSlideOut 1s both ease;
+  -moz-animation: backSlideOut 1s both ease;
+  animation: backSlideOut 1s both ease;
+}
+.owl-backSlide-in {
+  -webkit-animation: backSlideIn 1s both ease;
+  -moz-animation: backSlideIn 1s both ease;
+  animation: backSlideIn 1s both ease;
+}
+/* goDown */
+.owl-goDown-out {
+  -webkit-animation: scaleToFade .7s ease both;
+  -moz-animation: scaleToFade .7s ease both;
+  animation: scaleToFade .7s ease both;
+}
+.owl-goDown-in {
+  -webkit-animation: goDown .6s ease both;
+  -moz-animation: goDown .6s ease both;
+  animation: goDown .6s ease both;
+}
+/* scaleUp */
+.owl-fadeUp-in {
+  -webkit-animation: scaleUpFrom .5s ease both;
+  -moz-animation: scaleUpFrom .5s ease both;
+  animation: scaleUpFrom .5s ease both;
+}
+
+.owl-fadeUp-out {
+  -webkit-animation: scaleUpTo .5s ease both;
+  -moz-animation: scaleUpTo .5s ease both;
+  animation: scaleUpTo .5s ease both;
+}
+/* Keyframes */
+/*empty*/
+@-webkit-keyframes empty {
+  0% {opacity: 1}
+}
+@-moz-keyframes empty {
+  0% {opacity: 1}
+}
+@keyframes empty {
+  0% {opacity: 1}
+}
+@-webkit-keyframes fadeIn {
+  0% { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes fadeIn {
+  0% { opacity:0; }
+  100% { opacity:1; }
+}
+@keyframes fadeIn {
+  0% { opacity:0; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes fadeOut {
+  0% { opacity:1; }
+  100% { opacity:0; }
+}
+@-moz-keyframes fadeOut {
+  0% { opacity:1; }
+  100% { opacity:0; }
+}
+@keyframes fadeOut {
+  0% { opacity:1; }
+  100% { opacity:0; }
+}
+@-webkit-keyframes backSlideOut {
+  25% { opacity: .5; -webkit-transform: translateZ(-500px); }
+  75% { opacity: .5; -webkit-transform: translateZ(-500px) translateX(-200%); }
+  100% { opacity: .5; -webkit-transform: translateZ(-500px) translateX(-200%); }
+}
+@-moz-keyframes backSlideOut {
+  25% { opacity: .5; -moz-transform: translateZ(-500px); }
+  75% { opacity: .5; -moz-transform: translateZ(-500px) translateX(-200%); }
+  100% { opacity: .5; -moz-transform: translateZ(-500px) translateX(-200%); }
+}
+@keyframes backSlideOut {
+  25% { opacity: .5; transform: translateZ(-500px); }
+  75% { opacity: .5; transform: translateZ(-500px) translateX(-200%); }
+  100% { opacity: .5; transform: translateZ(-500px) translateX(-200%); }
+}
+@-webkit-keyframes backSlideIn {
+  0%, 25% { opacity: .5; -webkit-transform: translateZ(-500px) translateX(200%); }
+  75% { opacity: .5; -webkit-transform: translateZ(-500px); }
+  100% { opacity: 1; -webkit-transform: translateZ(0) translateX(0); }
+}
+@-moz-keyframes backSlideIn {
+  0%, 25% { opacity: .5; -moz-transform: translateZ(-500px) translateX(200%); }
+  75% { opacity: .5; -moz-transform: translateZ(-500px); }
+  100% { opacity: 1; -moz-transform: translateZ(0) translateX(0); }
+}
+@keyframes backSlideIn {
+  0%, 25% { opacity: .5; transform: translateZ(-500px) translateX(200%); }
+  75% { opacity: .5; transform: translateZ(-500px); }
+  100% { opacity: 1; transform: translateZ(0) translateX(0); }
+}
+@-webkit-keyframes scaleToFade {
+  to { opacity: 0; -webkit-transform: scale(.8); }
+}
+@-moz-keyframes scaleToFade {
+  to { opacity: 0; -moz-transform: scale(.8); }
+}
+@keyframes scaleToFade {
+  to { opacity: 0; transform: scale(.8); }
+}
+@-webkit-keyframes goDown {
+  from { -webkit-transform: translateY(-100%); }
+}
+@-moz-keyframes goDown {
+  from { -moz-transform: translateY(-100%); }
+}
+@keyframes goDown {
+  from { transform: translateY(-100%); }
+}
+
+@-webkit-keyframes scaleUpFrom {
+  from { opacity: 0; -webkit-transform: scale(1.5); }
+}
+@-moz-keyframes scaleUpFrom {
+  from { opacity: 0; -moz-transform: scale(1.5); }
+}
+@keyframes scaleUpFrom {
+  from { opacity: 0; transform: scale(1.5); }
+}
+
+@-webkit-keyframes scaleUpTo {
+  to { opacity: 0; -webkit-transform: scale(1.5); }
+}
+@-moz-keyframes scaleUpTo {
+  to { opacity: 0; -moz-transform: scale(1.5); }
+}
+@keyframes scaleUpTo {
+  to { opacity: 0; transform: scale(1.5); }
+}
+.plyr input[type=range]:focus,.plyr:focus{outline:0}.plyr .plyr__video-embed iframe,.plyr__tooltip{pointer-events:none}@keyframes plyr-progress{to{background-position:25px 0}}.plyr{position:relative;max-width:100%;min-width:200px;font-family:Avenir,'Avenir Next','Helvetica Neue','Segoe UI',Helvetica,Arial,sans-serif;direction:ltr}.plyr,.plyr *,.plyr ::after,.plyr ::before{box-sizing:border-box}.plyr a,.plyr button,.plyr input,.plyr label{-ms-touch-action:manipulation;touch-action:manipulation}.plyr audio,.plyr video{width:100%;height:auto;vertical-align:middle;border-radius:inherit}.plyr input[type=range]{display:block;height:20px;width:100%;margin:0;padding:0;vertical-align:middle;-webkit-appearance:none;-moz-appearance:none;appearance:none;cursor:pointer;border:none;background:0 0}.plyr input[type=range]::-webkit-slider-runnable-track{height:8px;background:0 0;border:0;border-radius:4px;-webkit-user-select:none;user-select:none}.plyr input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;margin-top:-4px;position:relative;height:16px;width:16px;background:#fff;border:2px solid transparent;border-radius:100%;transition:background .2s ease,border .2s ease,transform .2s ease;box-shadow:0 1px 1px rgba(0,0,0,.15),0 0 0 1px rgba(0,0,0,.15);box-sizing:border-box}.plyr input[type=range]::-moz-range-track{height:8px;background:0 0;border:0;border-radius:4px;-moz-user-select:none;user-select:none}.plyr input[type=range]::-moz-range-thumb{position:relative;height:16px;width:16px;background:#fff;border:2px solid transparent;border-radius:100%;transition:background .2s ease,border .2s ease,transform .2s ease;box-shadow:0 1px 1px rgba(0,0,0,.15),0 0 0 1px rgba(0,0,0,.15);box-sizing:border-box}.plyr input[type=range]::-ms-track{height:8px;background:0 0;border:0;color:transparent}.plyr input[type=range]::-ms-fill-upper{height:8px;background:0 0;border:0;border-radius:4px;-ms-user-select:none;user-select:none}.plyr input[type=range]::-ms-fill-lower{height:8px;border:0;border-radius:4px;-ms-user-select:none;user-select:none;background:#3498db}.plyr input[type=range]::-ms-thumb{position:relative;height:16px;width:16px;background:#fff;border:2px solid transparent;border-radius:100%;transition:background .2s ease,border .2s ease,transform .2s ease;box-shadow:0 1px 1px rgba(0,0,0,.15),0 0 0 1px rgba(0,0,0,.15);box-sizing:border-box;margin-top:0}.plyr input[type=range]::-ms-tooltip{display:none}.plyr input[type=range]::-moz-focus-outer{border:0}.plyr input[type=range].tab-focus:focus{outline-offset:3px}.plyr input[type=range]:active::-webkit-slider-thumb{background:#3498db;border-color:#fff;transform:scale(1.25)}.plyr input[type=range]:active::-moz-range-thumb{background:#3498db;border-color:#fff;transform:scale(1.25)}.plyr input[type=range]:active::-ms-thumb{background:#3498db;border-color:#fff;transform:scale(1.25)}.plyr--video input[type=range].tab-focus:focus{outline:rgba(255,255,255,.5) dotted 1px}.plyr--audio input[type=range].tab-focus:focus{outline:rgba(86,93,100,.5) dotted 1px}.plyr__sr-only{clip:rect(1px,1px,1px,1px);overflow:hidden;position:absolute!important;padding:0!important;border:0!important;height:1px!important;width:1px!important}.plyr__video-wrapper{position:relative;background:#000;border-radius:inherit;-webkit-mask-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC)}.plyr__video-embed{padding-bottom:56.25%;height:0;overflow:hidden}.plyr__video-embed iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.plyr__video-embed>div{position:relative;padding-bottom:200%;transform:translateY(-35.95%)}.plyr video::-webkit-media-text-track-container{display:none}.plyr__captions{display:none;position:absolute;bottom:0;left:0;width:100%;padding:20px;transform:translateY(-40px);transition:transform .3s ease;color:#fff;font-size:16px;text-align:center;font-weight:400}.plyr__captions span{border-radius:2px;padding:3px 10px;background:rgba(0,0,0,.7);-webkit-box-decoration-break:clone;box-decoration-break:clone;line-height:150%}.plyr__captions span:empty{display:none}@media (min-width:768px){.plyr__captions{font-size:24px}}.plyr--captions-active .plyr__captions{display:block}.plyr--fullscreen-active .plyr__captions{font-size:32px}.plyr--hide-controls .plyr__captions{transform:translateY(-15px)}.plyr ::-webkit-media-controls{display:none}.plyr__controls{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;line-height:1;text-align:center}.plyr__controls .plyr__progress,.plyr__controls .plyr__time,.plyr__controls>button{margin-left:5px}.plyr__controls .plyr__progress:first-child,.plyr__controls .plyr__time:first-child,.plyr__controls>button:first-child{margin-left:0}.plyr__controls .plyr__volume{margin-left:5px}.plyr__controls [data-plyr=pause]{margin-left:0}.plyr__controls button{position:relative;display:inline-block;-ms-flex-negative:0;flex-shrink:0;overflow:visible;vertical-align:middle;padding:7px;border:0;background:0 0;border-radius:3px;cursor:pointer;transition:background .3s ease,color .3s ease,opacity .3s ease;color:inherit}.plyr__controls button svg{width:18px;height:18px;display:block;fill:currentColor}.plyr__controls button:focus{outline:0}.plyr__controls .icon--captions-on,.plyr__controls .icon--exit-fullscreen,.plyr__controls .icon--muted{display:none}@media (min-width:480px){.plyr__controls .plyr__progress,.plyr__controls .plyr__time,.plyr__controls>button{margin-left:10px}}.plyr--hide-controls .plyr__controls{opacity:0;pointer-events:none}.plyr--video .plyr__controls{position:absolute;left:0;right:0;bottom:0;padding:50px 10px 10px;background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.5));border-bottom-left-radius:inherit;border-bottom-right-radius:inherit;color:#fff;transition:opacity .3s ease}.plyr--video .plyr__controls button.tab-focus:focus,.plyr--video .plyr__controls button:hover{background:#3498db;color:#fff}.plyr--audio .plyr__controls{padding:10px;border-radius:inherit;background:#fff;border:1px solid #dbe3e8;color:#565D64}.plyr--audio .plyr__controls button.tab-focus:focus,.plyr--audio .plyr__controls button:hover,.plyr__play-large{background:#3498db;color:#fff}.plyr__play-large{display:none;position:absolute;z-index:1;top:50%;left:50%;transform:translate(-50%,-50%);padding:10px;border:4px solid currentColor;border-radius:100%;box-shadow:0 1px 1px rgba(0,0,0,.15);transition:all .3s ease}.plyr__play-large svg{position:relative;left:2px;width:20px;height:20px;display:block;fill:currentColor}.plyr__play-large:focus{outline:rgba(255,255,255,.5) dotted 1px}.plyr .plyr__play-large{display:inline-block}.plyr--audio .plyr__play-large,.plyr--playing .plyr__controls [data-plyr=play],.plyr__controls [data-plyr=pause]{display:none}.plyr--playing .plyr__play-large{opacity:0;visibility:hidden}.plyr--playing .plyr__controls [data-plyr=pause]{display:inline-block}.plyr--captions-active .plyr__controls .icon--captions-on,.plyr--fullscreen-active .icon--exit-fullscreen,.plyr--muted .plyr__controls .icon--muted{display:block}.plyr [data-plyr=captions],.plyr [data-plyr=fullscreen],.plyr--captions-active .plyr__controls .icon--captions-on+svg,.plyr--fullscreen-active .icon--exit-fullscreen+svg,.plyr--muted .plyr__controls .icon--muted+svg{display:none}.plyr--captions-enabled [data-plyr=captions],.plyr--fullscreen-enabled [data-plyr=fullscreen]{display:inline-block}.plyr__tooltip{position:absolute;z-index:2;bottom:100%;margin-bottom:10px;padding:5px 7.5px;opacity:0;background:rgba(0,0,0,.7);border-radius:3px;color:#fff;font-size:14px;line-height:1.3;transform:translate(-50%,10px) scale(.8);transform-origin:50% 100%;transition:transform .2s .1s ease,opacity .2s .1s ease}.plyr__tooltip::before{content:'';position:absolute;width:0;height:0;left:50%;transform:translateX(-50%);bottom:-4px;border-right:4px solid transparent;border-top:4px solid rgba(0,0,0,.7);border-left:4px solid transparent;z-index:2}.plyr button.tab-focus:focus .plyr__tooltip,.plyr button:hover .plyr__tooltip,.plyr__tooltip--visible{opacity:1;transform:translate(-50%,0) scale(1)}.plyr button:hover .plyr__tooltip{z-index:3}.plyr__controls button:first-child .plyr__tooltip{left:0;transform:translate(0,10px) scale(.8);transform-origin:0 100%}.plyr__controls button:first-child .plyr__tooltip::before{left:16px}.plyr__controls button:last-child .plyr__tooltip{right:0;transform:translate(0,10px) scale(.8);transform-origin:100% 100%}.plyr__controls button:last-child .plyr__tooltip::before{left:auto;right:16px;transform:translateX(50%)}.plyr__controls button:first-child .plyr__tooltip--visible,.plyr__controls button:first-child.tab-focus:focus .plyr__tooltip,.plyr__controls button:first-child:hover .plyr__tooltip,.plyr__controls button:last-child .plyr__tooltip--visible,.plyr__controls button:last-child.tab-focus:focus .plyr__tooltip,.plyr__controls button:last-child:hover .plyr__tooltip{transform:translate(0,0) scale(1)}.plyr__progress{position:relative;display:none;-ms-flex:1;flex:1}.plyr__progress input[type=range]{position:relative;z-index:2}.plyr__progress input[type=range]::-webkit-slider-runnable-track{background:0 0}.plyr__progress input[type=range]::-moz-range-track{background:0 0}.plyr__progress input[type=range]::-ms-fill-upper{background:0 0}.plyr__progress .plyr__tooltip{left:0}.plyr .plyr__progress{display:inline-block}.plyr__progress--buffer,.plyr__progress--played,.plyr__volume--display{position:absolute;left:0;top:50%;width:100%;height:8px;margin:-4px 0 0;padding:0;vertical-align:top;-webkit-appearance:none;-moz-appearance:none;appearance:none;border:none;border-radius:100px}.plyr__progress--buffer::-webkit-progress-bar,.plyr__progress--played::-webkit-progress-bar,.plyr__volume--display::-webkit-progress-bar{background:0 0}.plyr__progress--buffer::-webkit-progress-value,.plyr__progress--played::-webkit-progress-value,.plyr__volume--display::-webkit-progress-value{background:currentColor;border-radius:100px;min-width:8px}.plyr__progress--buffer::-moz-progress-bar,.plyr__progress--played::-moz-progress-bar,.plyr__volume--display::-moz-progress-bar{background:currentColor;border-radius:100px;min-width:8px}.plyr__progress--buffer::-ms-fill,.plyr__progress--played::-ms-fill,.plyr__volume--display::-ms-fill{border-radius:100px}.plyr__progress--played,.plyr__volume--display{z-index:1;color:#3498db;background:0 0;transition:none}.plyr__progress--played::-webkit-progress-value,.plyr__volume--display::-webkit-progress-value{min-width:8px;max-width:99%;border-top-right-radius:0;border-bottom-right-radius:0;transition:none}.plyr__progress--played::-moz-progress-bar,.plyr__volume--display::-moz-progress-bar{min-width:8px;max-width:99%;border-top-right-radius:0;border-bottom-right-radius:0;transition:none}.plyr__progress--played::-ms-fill,.plyr__volume--display::-ms-fill{display:none}.plyr__progress--buffer::-webkit-progress-value{transition:width .2s ease}.plyr__progress--buffer::-moz-progress-bar{transition:width .2s ease}.plyr__progress--buffer::-ms-fill{transition:width .2s ease}.plyr--video .plyr__progress--buffer,.plyr--video .plyr__volume--display{background:rgba(255,255,255,.25)}.plyr--video .plyr__progress--buffer{color:rgba(255,255,255,.25)}.plyr--audio .plyr__progress--buffer,.plyr--audio .plyr__volume--display{background:rgba(198,214,219,.66)}.plyr--audio .plyr__progress--buffer{color:rgba(198,214,219,.66)}.plyr--loading .plyr__progress--buffer{animation:plyr-progress 1s linear infinite;background-size:25px 25px;background-repeat:repeat-x;background-image:linear-gradient(-45deg,rgba(0,0,0,.15) 25%,transparent 25%,transparent 50%,rgba(0,0,0,.15) 50%,rgba(0,0,0,.15) 75%,transparent 75%,transparent);color:transparent}.plyr--video.plyr--loading .plyr__progress--buffer{background-color:rgba(255,255,255,.25)}.plyr--audio.plyr--loading .plyr__progress--buffer{background-color:rgba(198,214,219,.66)}.plyr__time{display:inline-block;vertical-align:middle;font-size:14px}.plyr__time+.plyr__time{display:none}@media (min-width:768px){.plyr__time+.plyr__time{display:inline-block}}.plyr__time+.plyr__time::before{content:'\2044';margin-right:10px}.plyr__volume{display:none}.plyr .plyr__volume{-ms-flex:1;flex:1;position:relative}.plyr .plyr__volume input[type=range]{position:relative;z-index:2}@media (min-width:480px){.plyr .plyr__volume{display:block;max-width:60px}}@media (min-width:768px){.plyr .plyr__volume{max-width:100px}}.plyr--is-ios .plyr__volume,.plyr--is-ios [data-plyr=mute]{display:none!important}.plyr--fullscreen-active{position:fixed;top:0;left:0;right:0;bottom:0;height:100%;width:100%;z-index:10000000;background:#000;border-radius:0!important}.plyr--fullscreen-active video{height:100%}.plyr--fullscreen-active .plyr__video-wrapper{height:100%;width:100%}.plyr--fullscreen-active .plyr__controls{position:absolute;bottom:0;left:0;right:0}.plyr--fullscreen-active.plyr--vimeo .plyr__video-wrapper{height:0;top:50%;transform:translateY(-50%)}
+/* line 1, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 33px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 10, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 16, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 22, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 25, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 29, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 35, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/scaffolds.scss */
+th {
+  padding-bottom: 5px;
+}
+
+/* line 39, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/scaffolds.scss */
+td {
+  padding: 0 5px 7px;
+}
+
+/* line 44, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 49, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 53, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 59, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 66, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 76, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 82, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+/*! Swipebox v1.3.0 | Constantin Saguin csag.co | MIT License | github.com/brutaldesign/swipebox */
+
+html.swipebox-html.swipebox-touch {
+  overflow: hidden !important;
+}
+
+#swipebox-overlay img {
+  border: none !important;
+}
+
+#swipebox-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999 !important;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#swipebox-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#swipebox-slider {
+  -webkit-transition: -webkit-transform 0.4s ease;
+          transition: transform 0.4s ease;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  white-space: nowrap;
+  position: absolute;
+  display: none;
+  cursor: pointer;
+}
+#swipebox-slider .slide {
+  height: 100%;
+  width: 100%;
+  line-height: 1px;
+  text-align: center;
+  display: inline-block;
+}
+#swipebox-slider .slide:before {
+  content: "";
+  display: inline-block;
+  height: 50%;
+  width: 1px;
+  margin-right: -1px;
+}
+#swipebox-slider .slide img,
+#swipebox-slider .slide .swipebox-video-container,
+#swipebox-slider .slide .swipebox-inline-container {
+  display: inline-block;
+  max-height: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+  vertical-align: middle;
+}
+#swipebox-slider .slide .swipebox-video-container {
+  background: none;
+  max-width: 1140px;
+  max-height: 100%;
+  width: 100%;
+  padding: 5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+#swipebox-slider .slide .swipebox-video-container .swipebox-video {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  position: relative;
+}
+#swipebox-slider .slide .swipebox-video-container .swipebox-video iframe {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#swipebox-slider .slide-loading {
+  background: url(img/loader.gif) no-repeat center center;
+}
+
+#swipebox-bottom-bar,
+#swipebox-top-bar {
+  -webkit-transition: 0.5s;
+          transition: 0.5s;
+  position: absolute;
+  left: 0;
+  z-index: 999;
+  height: 50px;
+  width: 100%;
+}
+
+#swipebox-bottom-bar {
+  bottom: -50px;
+}
+#swipebox-bottom-bar.visible-bars {
+  -webkit-transform: translate3d(0, -50px, 0);
+          transform: translate3d(0, -50px, 0);
+}
+
+#swipebox-top-bar {
+  top: -50px;
+}
+#swipebox-top-bar.visible-bars {
+  -webkit-transform: translate3d(0, 50px, 0);
+          transform: translate3d(0, 50px, 0);
+}
+
+#swipebox-title {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+#swipebox-prev,
+#swipebox-next,
+#swipebox-close {
+  background-image: url(img/icons.png);
+  background-repeat: no-repeat;
+  border: none !important;
+  text-decoration: none !important;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  top: 0;
+}
+
+#swipebox-arrows {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 50px;
+}
+
+#swipebox-prev {
+  background-position: -32px 13px;
+  float: left;
+}
+
+#swipebox-next {
+  background-position: -78px 13px;
+  float: right;
+}
+
+#swipebox-close {
+  top: 0;
+  right: 0;
+  position: absolute;
+  z-index: 9999;
+  background-position: 15px 12px;
+}
+
+.swipebox-no-close-button #swipebox-close {
+  display: none;
+}
+
+#swipebox-prev.disabled,
+#swipebox-next.disabled {
+  opacity: 0.3;
+}
+
+.swipebox-no-touch #swipebox-overlay.rightSpring #swipebox-slider {
+  -webkit-animation: rightSpring 0.3s;
+          animation: rightSpring 0.3s;
+}
+.swipebox-no-touch #swipebox-overlay.leftSpring #swipebox-slider {
+  -webkit-animation: leftSpring 0.3s;
+          animation: leftSpring 0.3s;
+}
+
+.swipebox-touch #swipebox-container:before, .swipebox-touch #swipebox-container:after {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: all .3s ease;
+          transition: all .3s ease;
+  content: ' ';
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  height: 100%;
+  width: 20px;
+  opacity: 0;
+}
+.swipebox-touch #swipebox-container:before {
+  left: 0;
+  -webkit-box-shadow: inset 10px 0px 10px -8px #656565;
+          box-shadow: inset 10px 0px 10px -8px #656565;
+}
+.swipebox-touch #swipebox-container:after {
+  right: 0;
+  -webkit-box-shadow: inset -10px 0px 10px -8px #656565;
+          box-shadow: inset -10px 0px 10px -8px #656565;
+}
+.swipebox-touch #swipebox-overlay.leftSpringTouch #swipebox-container:before {
+  opacity: 1;
+}
+.swipebox-touch #swipebox-overlay.rightSpringTouch #swipebox-container:after {
+  opacity: 1;
+}
+
+@-webkit-keyframes rightSpring {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: -30px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes rightSpring {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: -30px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+@-webkit-keyframes leftSpring {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: 30px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+@keyframes leftSpring {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: 30px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+@media screen and (min-width: 800px) {
+  #swipebox-close {
+    right: 10px;
+  }
+
+  #swipebox-arrows {
+    width: 92%;
+    max-width: 800px;
+  }
+}
+/* Skin 
+--------------------------*/
+#swipebox-overlay {
+  background: #0d0d0d;
+}
+
+#swipebox-bottom-bar,
+#swipebox-top-bar {
+  text-shadow: 1px 1px 1px black;
+  background: #000;
+  opacity: 0.95;
+}
+
+#swipebox-top-bar {
+  color: white !important;
+  font-size: 15px;
+  line-height: 43px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+ /*------------------------------------------------------------------
+ [Main Stylesheet]
+
+ Author:	THEMES.SINDEVO.COM
+ Version:	1.0
+ Created:	06 April 2017
+ Last updated:	06 April 2017
+ Template:	The Wedding Date | Responsive HTML Wedding Template
+ -------------------------------------------------------------------*/
+ /*-----------------------------------------------------------------
+ [Table of Contents]
+
+ 1. RESET
+ 2. GENERAL
+ 	2-1 HEADINGS
+ 3. SMART GRID
+ 4. GENERAL LAYOUT
+ 	4-1. HEADER
+ 	4-2. MENU
+ 	4-3. CUSTOM TITLES
+ 	4-4. CUSTOM READ MORE
+ 5. PAGES LAYOUT
+ 	5-1. INFO BLOCKS
+ 	5-2. IMAGE BLOCKS
+ 	5-3. GIFTS BLOCK
+ 	5-4. CUSTOM MAP
+ 	5-5. CUSTOM VIDEO PLAYER
+ 	5-6. BUTTONS AND DIVIDERS
+ 6. HOME PAGE
+ 	6-1. HOME SLIDER
+ 	6-2. HEADER  NAMES
+ 	6-3. HOME ABOUT BLOCKS
+ 	6-4. COUNTDOWN
+ 	6-5. CAROUSEL
+ 	6-6. HOME LATEST POSTS
+ 7. BLOG LAYOUT
+ 	7-1. LATEST POSTS LISTING
+ 	7-2. BLOG SINGLE
+ 	7-3. BLOG COMMENTS
+ 8. PHOTO GALLERY
+
+ 9. FORMS
+ 10. FOOTER
+ 11. MEDIA QUERIES
+ */
+/*===============================================*/
+/* 1. RESET		 						 */
+/*===============================================*/
+@import url(css/reset.css);
+/*===============================================*/
+/* 2. GENERAL		 						 */
+/*===============================================*/
+/* line 73, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+html, body, .container, .header {
+  height: 100%;
+}
+
+/* line 76, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+body {
+  font-family: 'Raleway', sans-serif;
+  padding: 0;
+  font-size: 14px;
+  margin: 0 auto;
+  color: #65645f;
+}
+
+/* line 83, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.clear {
+  clear: both;
+}
+
+/* line 86, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+p {
+  padding: 0;
+  margin: 0px;
+  text-align: left;
+  line-height: 24px;
+}
+
+/* line 92, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+a {
+  text-decoration: none;
+  color: #ef6f5e;
+}
+
+/* line 96, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+a.read_more {
+  display: inline-block;
+  margin: auto;
+  padding: 10px 40px;
+  border: 1px #65645f solid;
+}
+
+/* line 102, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+blockquote {
+  font-style: italic;
+  font-size: 24px;
+  padding: 0 5%;
+  margin: 40px 0 60px 0;
+  line-height: 34px;
+  position: relative;
+  text-align: center;
+}
+
+/* line 111, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+blockquote:after {
+  content: ' ';
+  position: absolute;
+  display: block;
+  width: 10%;
+  margin: 20px 40%;
+  border: 1px solid #ef6f5e;
+}
+
+/* line 119, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+a img {
+  border: none;
+}
+
+/* line 122, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+a:hover {
+  text-decoration: none;
+  color: #212121;
+}
+
+/* line 126, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+img.responsive_image {
+  max-width: 100%;
+  display: block;
+  margin: auto auto 20px auto;
+}
+
+/* line 131, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.no-touch .back:hover {
+  color: #FFFFFF;
+}
+
+/*---------------------------*/
+/* 2-1. HEADINGS             */
+/*---------------------------*/
+/* line 137, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #454545;
+  padding: 0 0 22px 0;
+  margin: 0;
+}
+
+/* line 144, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+h1 {
+  font-size: 40px;
+}
+
+/* line 147, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+h2 {
+  font-size: 30px;
+}
+
+/* line 150, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+h3 {
+  font-size: 22px;
+}
+
+/* line 153, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+h4 {
+  font-size: 20px;
+}
+
+/* line 156, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+h5 {
+  font-size: 18px;
+}
+
+/* line 159, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+h6 {
+  font-size: 16px;
+}
+
+/*===============================================*/
+/* 3. SMART GRID    		 			    	 */
+/*===============================================*/
+/* line 165, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.section_full {
+  width: 100%;
+  padding: 140px 0;
+  clear: both;
+  float: left;
+  margin: auto;
+}
+
+/* line 172, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.section_centered {
+  width: 75%;
+  padding: 140px 0;
+  clear: both;
+  margin: auto;
+}
+
+/* line 178, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.full_width {
+  width: 100%;
+  margin: 0 0 80px 0;
+  float: left;
+  clear: both;
+}
+
+/* line 184, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.left23 {
+  width: 65.34%;
+  float: left;
+  margin: 0 4% 80px 0;
+  clear: both;
+}
+
+/* line 190, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.left12 {
+  width: 48%;
+  float: left;
+  margin: 0 4% 80px 0;
+  clear: both;
+}
+
+/* line 196, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.left12_last {
+  width: 48%;
+  float: right;
+  margin: 0 0 80px 0;
+}
+
+/* line 201, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.left13 {
+  width: 30.66%;
+  float: left;
+  margin: 0 4% 80px 0;
+}
+
+/* line 206, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.left13_last {
+  width: 30.66%;
+  float: right;
+  margin: 0 0 80px 0;
+}
+
+/* line 211, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.left14 {
+  width: 22%;
+  float: left;
+  margin: 0 4% 80px 0;
+}
+
+/* line 216, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.left14_last {
+  width: 22%;
+  float: right;
+  margin: 0 0 80px 0;
+}
+
+/* line 221, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.left15 {
+  width: 16.8%;
+  float: left;
+  margin: 0 4% 80px 0;
+}
+
+/* line 226, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.left15_last {
+  width: 16.8%;
+  float: left;
+  margin: 0 0 80px 0;
+}
+
+/*===============================================*/
+/* 4. GENERAL LAYOUT    		 						 */
+/*===============================================*/
+/*---------------------------*/
+/* 4-1. HEADER            */
+/*---------------------------*/
+/* line 239, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.header {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+  background: url(/assets/header-bg-bbee8e4d594109fdd8c1f80cb89fce2ad0ae7aa7032f627c529f9f4b637ec846.jpg) #474546;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+}
+
+/*---------------------------*/
+/* 4-2. MENU            */
+/*---------------------------*/
+/* line 258, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+#main_menu {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  text-align: center;
+  z-index: 9999;
+  height: 70px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+/* line 271, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.menuwhite {
+  background: none;
+}
+
+/* line 274, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+ul.menuwhite {
+  background-color: #f0ece3;
+}
+
+/* line 277, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.menugray {
+  background-color: #f0ece3;
+}
+
+/* line 280, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+#main_menu li a span {
+  position: relative;
+  display: inline-block;
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+/* line 287, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+#main_menu li a span::before {
+  position: absolute;
+  top: -100%;
+  color: #ef6f5e;
+  content: attr(data-hover);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 296, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+#main_menu li a:hover span,
+#main_menu li a:focus span {
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+/* line 302, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+#main_menu ul,
+#main_menu ul li,
+#main_menu ul li a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 316, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+#main_menu:after,
+#main_menu > ul:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/* line 325, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+#menu-button {
+  position: absolute;
+  padding-left: 1.25em;
+  font-size: 30px;
+  top: 8px;
+  right: 8px;
+  display: none;
+  cursor: pointer;
+}
+
+/* line 334, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+#menu-button:before {
+  content: "";
+  position: absolute;
+  top: 0.25em;
+  left: 0;
+  width: 1em;
+  height: 0.125em;
+  border-top: 0.375em double #333;
+  border-bottom: 0.135em solid #333;
+}
+
+/* line 344, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+#main_menu > ul > li {
+  display: inline-block;
+  padding: 0;
+}
+
+/* line 345, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+#main_menu.menuwhite > ul > li > a {
+  color: #7d835f;
+  font-size: 13px;
+  display: inline-block;
+  letter-spacing: 0.4px;
+  padding: 0 25px;
+  margin: 20px 0;
+  font-weight: 700;
+  overflow: hidden;
+  line-height: 30px;
+  height: 30px;
+}
+
+/* line 348, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+#main_menu.menugray > ul > li > a {
+  color: #454545;
+  font-size: 13px;
+  display: inline-block;
+  letter-spacing: 0.4px;
+  padding: 0 25px;
+  margin: 20px 0;
+  font-weight: 700;
+  overflow: hidden;
+  line-height: 30px;
+  height: 30px;
+}
+
+/* line 351, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+#main_menu.menuwhite > ul > li > a.selected {
+  color: #ef6f5e;
+}
+
+/* line 352, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+#main_menu.menugray > ul > li > a.selected {
+  color: #ef6f5e;
+}
+
+/* line 353, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+#main_menu ul ul {
+  position: absolute;
+  left: -9999px;
+  top: 70px;
+  z-index: 9999;
+  text-align: left;
+  padding: 5px 0;
+}
+
+/* line 361, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+#main_menu li:hover > ul {
+  left: auto;
+}
+
+/* line 362, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+#main_menu ul ul ul {
+  margin-left: 100%;
+  top: 0;
+}
+
+/* line 366, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+#main_menu ul ul li a {
+  width: 200px;
+  padding: 10px 0 10px 15px;
+  border-bottom: 1px #f1f1f1 solid;
+  font-size: 12px;
+  margin: 5px 10px;
+  color: #333;
+}
+
+/* line 374, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+#main_menu ul ul li:last-child a {
+  border-bottom: none;
+}
+
+/* line 377, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+#main_menu ul ul li a:hover {
+  color: #ef6f5e;
+}
+
+/* line 380, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+#main_menu ul li > a:hover, #main_menu > ul > li.current-menu-item a {
+  color: #ef6f5e;
+}
+
+/*---------------------------*/
+/* 4-3. CUSTOM TITLES            */
+/*---------------------------*/
+/* line 385, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.centered_title {
+  width: 100%;
+  text-align: center;
+  padding: 0px 0 60px 0;
+  clear: both;
+}
+
+/* line 391, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.centered_title h2 {
+  font-size: 40px;
+  letter-spacing: -1px;
+  font-weight: 900;
+  padding: 0 0 10px 0;
+  margin: 0px;
+  line-height: 45px;
+}
+
+/* line 399, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.centered_title h2 span {
+  font-family: 'Clicker Script', cursive;
+  font-weight: 400;
+  color: #ef6f5e;
+}
+
+/* line 404, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+p.under_title_descr {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0 20px;
+  margin: 0 auto 0 auto;
+  text-align: center;
+  color: #646464;
+  border-bottom: 1px solid #ef6f5e;
+  line-height: 0.1em;
+  display: inline-block;
+}
+
+/* line 415, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+p.under_title_descr span {
+  background: #fff;
+  padding: 0 10px;
+}
+
+/* line 419, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.carousel_container p.under_title_descr span {
+  background: #f6f6f4;
+}
+
+/*---------------------------*/
+/* 4-4. CUSTOM READ MORE            */
+/*---------------------------*/
+/* line 425, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.read_more_full {
+  padding: 40px 0 0 0;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  clear: both;
+}
+
+/* line 432, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.read_more_full a {
+  display: inline-block;
+  border-bottom: 1px solid #ef6f5e;
+  line-height: 0.1em;
+  padding: 0 10px;
+  font-weight: 700;
+}
+
+/* line 439, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.read_more_full a span {
+  background: #fff;
+  padding: 0 10px;
+}
+
+/* line 443, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.read_more_full a:hover {
+  color: #5d594d;
+}
+
+/*===============================================*/
+/* 5. PAGES LAYOUT		 						 */
+/*===============================================*/
+/*---------------------------*/
+/* 5-1. INFO BLOCKS     	 */
+/*---------------------------*/
+/* line 452, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.infoblock {
+  text-align: center;
+}
+
+/* line 455, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.infoblock h2 {
+  font-size: 20px;
+  letter-spacing: 0.8px;
+  padding: 0 0 25px 0;
+  margin: 0px;
+}
+
+/* line 461, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.infoblock h4 {
+  font-size: 16px;
+  letter-spacing: 0.8px;
+  padding: 0 0 25px 0;
+  margin: 0px;
+}
+
+/* line 467, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.infoblock span.uptitle {
+  font-size: 18px;
+  display: block;
+  letter-spacing: -0.5px;
+  padding: 0 0 10px 0;
+  font-weight: 400;
+  margin: 0px;
+  color: #172854;
+}
+
+/* line 476, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.infoblock p {
+  text-align: center;
+  padding: 25px 5% 0 5%;
+}
+
+/* line 480, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.infoblock .infoicon img {
+  width: 50px;
+  display: block;
+  margin: auto;
+}
+
+/*---------------------------*/
+/* 5-2. IMAGE BLOCKS    	 */
+/*---------------------------*/
+/* line 488, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.imageblock-left {
+  width: 100%;
+  clear: both;
+  float: left;
+  position: relative;
+}
+
+/* line 494, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.imageblock-text-right {
+  width: 50%;
+  right: 0;
+  top: 50px;
+  position: absolute;
+  background-color: #ef6f5e;
+  color: #fff;
+  padding: 40px;
+  z-index: 888;
+}
+
+/* line 504, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.imageblock-text-right h2 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 300;
+}
+
+/* line 509, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.imageblock-img {
+  position: relative;
+  max-width: 70%;
+  display: block;
+  float: left;
+}
+
+/* line 515, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.imageblock-img img {
+  width: 100%;
+  display: block;
+}
+
+/* line 519, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.imageblock-img span {
+  display: block;
+  width: 94%;
+  height: 92%;
+  position: absolute;
+  top: 3.5%;
+  left: 2.6%;
+  border: 3px #fff solid;
+  z-index: 777;
+}
+
+/* line 529, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.location_row_white {
+  display: block;
+  width: 40%;
+  float: left;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 0 0 40px;
+  margin: 20px 0 0 0;
+  color: #fff;
+  font-weight: 700;
+  background: url(icons/location_white.png) no-repeat left;
+}
+
+/* line 541, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.phone_row_white {
+  display: block;
+  width: 40%;
+  float: left;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 0 0 40px;
+  margin: 20px 0 0 0;
+  color: #fff;
+  font-weight: 700;
+  background: url(icons/phone_white.png) no-repeat left;
+}
+
+/*---------------------------*/
+/* 5-3. GIFTS BLOCK    	 */
+/*---------------------------*/
+/* line 556, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+#gifts_section {
+  margin-top: 60px;
+  clear: both;
+}
+
+/* line 560, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.gifts_content {
+  width: 100%;
+  text-align: center;
+  border-top: 1px #efefef solid;
+  border-bottom: 1px #efefef solid;
+  padding: 40px 0;
+}
+
+/* line 567, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.gifts_content ul {
+  list-style: none;
+}
+
+/* line 570, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.gifts_content ul li {
+  display: inline-block;
+  padding: 0 3%;
+}
+
+/* line 574, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.gifts_content ul li a img {
+  opacity: 1;
+  transition: opacity .3s ease-in-out;
+}
+
+/* line 578, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.gifts_content ul li:hover a img {
+  opacity: 0.6;
+  transition: opacity .3s ease-in-out;
+}
+
+/*---------------------------*/
+/* 5-4. CUSTOM MAP      	 */
+/*---------------------------*/
+/* line 585, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+#map {
+  width: 100%;
+  height: 500px;
+}
+
+/*---------------------------*/
+/* 5-5. CUSTOM VIDEO PLAYER   	 */
+/*---------------------------*/
+/* line 592, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.videocontainer {
+  width: 100%;
+  margin: 0 auto 20px auto;
+}
+
+/* line 596, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.videocontainer video {
+  max-width: 100%;
+}
+
+/* line 597, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.videocontainer img {
+  max-width: 100%;
+  padding: 0;
+  display: block;
+}
+
+/*---------------------------*/
+/* 5-6. BUTTONS AND DIVIDERS   	 */
+/*---------------------------*/
+/* line 602, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.page_divider {
+  border-bottom: 1px #e7e7e7 solid;
+  border-top: 1px #e7e7e7 solid;
+  padding: 40px 0;
+  margin: 20px 0;
+  text-align: center;
+  width: 100%;
+  clear: both;
+}
+
+/* line 612, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.example_buttons {
+  width: 100%;
+  margin: 40px 0;
+  text-align: center;
+}
+
+/* line 617, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.example_buttons a {
+  margin: 0 10px;
+}
+
+/* line 620, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.effect_button {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  padding: 15px 40px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  -webkit-backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fff;
+  color: #ef6f5e;
+  border: 1px solid #ef6f5e;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+/* line 639, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.effect_button::before,
+.effect_button::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 100%;
+  left: 0;
+  z-index: -1;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+  transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+
+/* line 653, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.effect_button::before {
+  background: #fedbd5;
+}
+
+/* line 656, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.effect_button::after {
+  background: #ef6f5e;
+}
+
+/* line 659, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.effect_button:hover {
+  color: #fff;
+}
+
+/* line 662, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.effect_button:hover::before,
+.effect_button:hover::after {
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+}
+
+/* line 667, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.effect_button:hover::after {
+  -webkit-transition-delay: 0.175s;
+  transition-delay: 0.175s;
+}
+
+/* line 672, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.simple_button {
+  display: inline-block;
+  vertical-align: middle;
+  z-index: 1;
+  padding: 15px 40px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  background-color: #ef6f5e;
+  color: #fff;
+  border: 1px solid #ef6f5e;
+}
+
+/* line 684, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.gray_button {
+  display: inline-block;
+  vertical-align: middle;
+  z-index: 1;
+  padding: 15px 40px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  background-color: #f6f6f4;
+  color: #ef6f5e;
+  border: 1px solid #f6f6f4;
+}
+
+/* line 696, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.border_button {
+  display: inline-block;
+  vertical-align: middle;
+  z-index: 1;
+  padding: 15px 40px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  background-color: #ffffff;
+  color: #ef6f5e;
+  border: 1px solid #ef6f5e;
+}
+
+/* line 708, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.borderbt_button {
+  display: inline-block;
+  vertical-align: middle;
+  z-index: 1;
+  padding: 14px 40px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  background-color: #ffffff;
+  color: #ef6f5e;
+  border-top: 2px solid #ef6f5e;
+  border-bottom: 2px solid #ef6f5e;
+}
+
+/*===============================================*/
+/* 6. HOME PAGE	 	        					 */
+/*===============================================*/
+/*---------------------------*/
+/* 6-1. SLIDER          	 */
+/*---------------------------*/
+/*--see owl.carousel.css for more details------*/
+/* line 728, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+#owl-demo .item img {
+  width: 100%;
+}
+
+/* line 731, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.sliderbg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: repeat;
+  background-origin: content-box;
+  z-index: 88;
+}
+
+/* line 744, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.trans_black {
+  width: 100%;
+  height: 100%;
+  background: url(black_trans.png) repeat;
+  position: absolute;
+  z-index: 99;
+}
+
+/*---------------------------*/
+/* 6-2. HEADER  NAMES 	 */
+/*---------------------------*/
+/* line 755, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.title_container {
+  text-align: center;
+  width: 90%;
+  height: 45%;
+  padding: 10% 0;
+  margin: 5% auto 0 auto;
+}
+
+/* line 762, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.title_up {
+  color: #ef6f5e;
+  font-size: 200px;
+  padding: 0px;
+  margin: 0px;
+  line-height: 180px;
+  letter-spacing: -1px;
+  font-weight: 300;
+  font-family: 'Satisfy', cursive;
+  -ms-transform: rotate(-3deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-3deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(-3deg);
+}
+
+/* line 776, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.title_down {
+  color: #ef6f5e;
+  font-size: 180px;
+  font-weight: 300;
+  padding: 0px;
+  margin: 0px;
+  line-height: 140px;
+  letter-spacing: -1px;
+  font-family: 'Satisfy', cursive;
+  -ms-transform: rotate(-5deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-5deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(-5deg);
+}
+
+/* line 790, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.title_middle {
+  color: #ef6f5e;
+  font-size: 50px;
+  font-weight: 700;
+  padding: 0 0 0 0;
+  padding: 0 0 0 0;
+  margin: 0px;
+  line-height: 50px;
+}
+
+/* line 799, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.title_date {
+  color: #7d835f;
+  font-weight: 700;
+  font-size: 30px;
+  padding: 60px 0 10px 0;
+}
+
+/*---------------------------*/
+/* 6-3. HOME ABOUT BLOCKS 	 */
+/*---------------------------*/
+/* line 809, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.about_section {
+  text-align: center;
+}
+
+/* line 812, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.about_section h3 {
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 0.4px;
+  padding: 60px 0 20px 0;
+  margin: 0px;
+}
+
+/* line 819, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.about_section p {
+  text-align: center;
+  padding: 0 10% 20px 10%;
+  margin: 0px;
+}
+
+/* line 824, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.more_about {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  padding: 15px 40px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  -webkit-backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fff;
+  color: #ef6f5e;
+  border: 1px solid #ef6f5e;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+/* line 843, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.more_about::before,
+.more_about::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 100%;
+  left: 0;
+  z-index: -1;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+  transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+
+/* line 857, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.more_about::before {
+  background: #fedbd5;
+}
+
+/* line 860, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.more_about::after {
+  background: #ef6f5e;
+}
+
+/* line 863, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.more_about:hover {
+  color: #fff;
+}
+
+/* line 866, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.more_about:hover::before,
+.more_about:hover::after {
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+}
+
+/* line 871, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.more_about:hover::after {
+  -webkit-transition-delay: 0.175s;
+  transition-delay: 0.175s;
+}
+
+/* line 875, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.about_pic_container {
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+  width: 75%;
+  margin: auto;
+  text-align: center;
+}
+
+/* line 883, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.about_pic {
+  max-width: 400px;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  border-radius: 80%;
+  -moz-border-radius: 80%;
+  -webkit-border-radius: 80%;
+  -khtml-border-radius: 80%;
+  overflow: hidden;
+}
+
+/* line 896, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.about_pic_frame {
+  position: absolute;
+  bottom: -5%;
+  left: 0px;
+  z-index: 999;
+}
+
+/* line 902, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.about_pic_frame img {
+  width: 100%;
+  display: block;
+}
+
+/* line 906, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.about_pic img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s;
+  -webkit-transition: -webkit-transform 0.5s;
+}
+
+/* line 912, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.about_pic_container:hover .about_pic img {
+  transform: scale(1.1);
+  transition: transform 0.5s;
+  -webkit-transition: -webkit-transform 0.5s;
+}
+
+/* line 917, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.socials_icons_listing {
+  padding: 0px;
+  margin: 0px 0 40px 0;
+  list-style: none;
+  text-align: center;
+}
+
+/* line 923, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.socials_icons_listing li {
+  width: 50px;
+  height: 50px;
+  min-width: 0;
+  padding: 0;
+  margin: 0 2px;
+  color: #fff;
+  border-radius: 50%;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  position: relative;
+  display: inline-block;
+}
+
+/* line 936, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.socials_icons_listing li img {
+  margin: 8px 0 0 0;
+}
+
+/* line 939, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.socials_icons_listing li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  z-index: -1;
+  box-shadow: inset 0 0 0 35px #f8f8f8;
+  -webkit-transform: scale3d(0.9, 0.9, 1);
+  transform: scale3d(0.9, 0.9, 1);
+  -webkit-transition: box-shadow 0.3s, -webkit-transform 0.3;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+/* line 954, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.socials_icons_listing li:hover {
+  color: #c3c3c3;
+}
+
+/* line 957, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.socials_icons_listing li:hover::before {
+  box-shadow: inset 0 0 0 1px #eeeeee;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+}
+
+/*---------------------------*/
+/* 6-4. COUNTDOWN 	 */
+/*---------------------------*/
+/* line 966, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.countdown_container {
+  width: 100%;
+  height: auto;
+  background-color: #fbf8f2;
+  clear: both;
+  text-align: center;
+}
+
+/* line 973, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.countdown_container_inner {
+  padding: 120px 0 120px 0;
+}
+
+/* line 976, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.countdown_container h2 {
+  text-align: center;
+  padding: 0px 0 40px 0;
+  font-size: 28px;
+  color: #7d835f;
+}
+
+/* line 982, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.hasCountdown {
+  width: 100%;
+  text-align: center;
+}
+
+/* line 986, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.countdown_rtl {
+  direction: rtl;
+}
+
+/* line 989, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.countdown_holding span {
+  color: #888;
+}
+
+/* line 992, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.countdown_row {
+  clear: both;
+  width: 100%;
+  padding: 0px;
+  text-align: center;
+}
+
+/* line 999, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.countdown_section {
+  display: inline-block;
+  text-align: center;
+  padding: 20px 2% 40px 2%;
+  margin: 0 1%;
+  text-align: center;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #7d835f;
+}
+
+/* line 1009, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+span.countdown_amount {
+  font-size: 80px;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  color: #7d835f;
+  padding: 0 0 0 0;
+}
+
+/* line 1016, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.countdown_rsvp {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  padding: 15px 80px;
+  margin: 60px auto auto auto;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: center;
+  -webkit-backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ef6f5e;
+  color: #ffffff;
+  border: 1px solid #ef6f5e;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+/* line 1036, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.countdown_rsvp::before,
+.countdown_rsvp::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 100%;
+  left: 0;
+  z-index: -1;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+  transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+
+/* line 1050, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.countdown_rsvp::before {
+  background: #fedbd5;
+}
+
+/* line 1053, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.countdown_rsvp::after {
+  background: #fff;
+}
+
+/* line 1056, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.countdown_rsvp:hover {
+  color: #ef6f5e;
+}
+
+/* line 1059, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.countdown_rsvp:hover::before,
+.countdown_rsvp:hover::after {
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+}
+
+/* line 1064, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.countdown_rsvp:hover::after {
+  -webkit-transition-delay: 0.175s;
+  transition-delay: 0.175s;
+}
+
+/*---------------------------*/
+/* 6-5. CAROUSEL 	 */
+/*---------------------------*/
+/* line 1072, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.carousel_container {
+  background-color: #f6f6f4;
+  clear: both;
+}
+
+/* line 1076, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.carousel14 {
+  width: 90%;
+  float: left;
+  text-align: center;
+  margin: 0 0 0 5%;
+}
+
+/* line 1082, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.carousel_listing {
+  width: 100%;
+  padding: 0 0 80px 0;
+  float: left;
+  clear: both;
+}
+
+/* line 1088, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.carousel14_listing {
+  width: 20%;
+  float: left;
+  text-align: center;
+  margin: 0 2.5% 40px 2.5%;
+}
+
+/* line 1094, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.carousel15_listing {
+  width: 15%;
+  float: left;
+  text-align: center;
+  margin: 0 2.5% 40px 2.5%;
+}
+
+/* line 1100, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.carousel14 h3, .carousel14_listing h3, .carousel15_listing h3 {
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  padding: 40px 0 0 0;
+  margin: 0px;
+}
+
+/* line 1108, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.carousel14 p, .carousel14_listing p, .carousel15_listing p {
+  font-size: 13px;
+  font-weight: 300;
+  padding: 0 0 10px 0;
+  margin: 0px;
+  text-align: center;
+  color: #ef6f5e;
+}
+
+/* line 1116, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.carousel_pic_container {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+}
+
+/* line 1122, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.carousel_pic {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  border-radius: 80%;
+  -moz-border-radius: 80%;
+  -webkit-border-radius: 80%;
+  -khtml-border-radius: 80%;
+  overflow: hidden;
+}
+
+/* line 1134, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.carousel_frame {
+  position: absolute;
+  bottom: -5%;
+  left: 0px;
+  z-index: 999;
+}
+
+/* line 1140, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.carousel_frame img {
+  width: 100%;
+  display: block;
+}
+
+/* line 1144, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.carousel_pic img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s;
+  -webkit-transition: -webkit-transform 0.5s;
+}
+
+/* line 1150, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.carousel_pic_container:hover .carousel_pic img {
+  transform: scale(1.1);
+  transition: transform 0.5s;
+  -webkit-transition: -webkit-transform 0.5s;
+}
+
+/*---------------------------*/
+/* 6-6. HOME LATEST POSTS 	 */
+/*---------------------------*/
+/* line 1159, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.latest_posts {
+  padding: 0;
+  width: 100%;
+}
+
+/*===============================================*/
+/* 7. BLOG LAYOUT 					        	 */
+/*===============================================*/
+/*---------------------------*/
+/* 7-1. LATEST POSTS LISTING	 */
+/*---------------------------*/
+/* line 1170, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.blog_post {
+  position: relative;
+  margin-bottom: 120px;
+}
+
+/* line 1174, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.blog_post:after {
+  content: "";
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  height: 89%;
+  width: 89%;
+  border: 2px solid #fde0dc;
+  padding: 0 0 60px 0;
+  z-index: -1;
+}
+
+/* line 1185, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.post_thumb {
+  position: relative;
+  z-index: -2;
+  background-color: #000000;
+  overflow: hidden;
+}
+
+/* line 1191, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.post_thumb img {
+  transition: opacity 0.5s, transform 0.5s;
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  display: block;
+  max-width: 100%;
+  margin: auto;
+}
+
+/* line 1198, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.post_thumb img::before, .post_thumb img::after {
+  transition: opacity 0.5s, transform 0.5s;
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+}
+
+/* line 1202, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.blog_post:hover .post_thumb img {
+  opacity: 0.5;
+  transform: scale(1.1);
+}
+
+/* line 1206, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.blog_post h2 {
+  padding: 20px 10% 10px 10%;
+  margin: 0px;
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 300;
+  color: #727272;
+}
+
+/* line 1214, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.blog_post h2 a {
+  color: #727272;
+}
+
+/* line 1217, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.post_social {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  z-index: 888;
+  opacity: 0;
+  transition: opacity 0.7s, transform 0.7s;
+  -webkit-transition: opacity 0.7s, -webkit-transform 0.7s;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  text-align: center;
+}
+
+/* line 1232, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.post_social li {
+  width: 50px;
+  height: 50px;
+  min-width: 0;
+  padding: 0;
+  margin: 0 2px;
+  color: #fff;
+  border-radius: 50%;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  position: relative;
+  display: inline-block;
+}
+
+/* line 1245, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.post_social li img {
+  margin: 8px 0 0 0;
+}
+
+/* line 1248, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.post_social li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  z-index: -1;
+  -webkit-transform: scale3d(0.9, 0.9, 1);
+  transform: scale3d(0.9, 0.9, 1);
+  -webkit-transition: box-shadow 0.3s, -webkit-transform 0.3;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+/* line 1262, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.post_social::before, .post_social::after {
+  transition: opacity 0.7s, transform 0.7s;
+  -webkit-transition: opacity 0.7s, -webkit-transform 0.7s;
+}
+
+/* line 1266, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.blog_post:hover .post_social {
+  opacity: 1;
+  transform: translateY(200%);
+  -webkit-transform: translateY(200%);
+}
+
+/* line 1271, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.post_date {
+  padding: 40px 0 0 10%;
+  font-size: 14px;
+  font-weight: 900;
+  color: #454545;
+}
+
+/* line 1277, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+a.post_read_more {
+  background-color: #ef6f5e;
+  color: #fff;
+  font-size: 12px;
+  padding: 10px 20px;
+  margin: 20px 0 0 10%;
+  display: inline-block;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+}
+
+/* line 1287, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.blog_post:hover a.post_read_more {
+  padding: 10px 30px;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+}
+
+/* line 1292, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.read_more_paragraph {
+  padding: 10px 0 0 0;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  clear: both;
+}
+
+/* line 1299, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.read_more_paragraph a {
+  display: inline-block;
+  border-bottom: 1px solid #ef6f5e;
+  line-height: 0.1em;
+  padding: 0 10px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+/* line 1307, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.read_more_paragraph a span {
+  background: #fff;
+  padding: 0 10px;
+}
+
+/* line 1311, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.read_more_paragraph a:hover {
+  color: #5d594d;
+}
+
+/*---------------------------*/
+/* 7-2. BLOG SINGLE	 */
+/*---------------------------*/
+/* line 1317, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.blogfeatured_image img {
+  width: 100%;
+  display: block;
+  margin: 0 0 40px 0;
+}
+
+/* line 1322, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.blogentry {
+  width: 80%;
+  display: block;
+  margin: 0 10%;
+}
+
+/* line 1327, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.blogentry img.responsiveimage {
+  width: 100%;
+  display: block;
+  margin: 0 0 40px 0;
+}
+
+/* line 1332, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.blogentry ul.listing {
+  padding: 20px 5%;
+  margin: 0px;
+  list-style: none;
+}
+
+/* line 1337, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.blogentry ul.listing li {
+  padding: 0 0 0 20px;
+  margin: 10px 0;
+  background: url(checked.png) no-repeat left center;
+}
+
+/* line 1342, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.post_tags {
+  padding: 20px 0;
+}
+
+/* line 1345, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.post_tags span {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* line 1349, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.post_tags a {
+  display: inline-block;
+  margin: 0 4px 8px 4px;
+  padding: 5px 10px;
+}
+
+/* line 1354, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.share_post {
+  border-top: 1px #e7e6e6 solid;
+  border-bottom: 1px #e7e6e6 solid;
+}
+
+/* line 1358, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.share_post h3 {
+  text-align: center;
+  font-weight: 800;
+  font-size: 16px;
+  padding: 40px 0 20px 0;
+  margin: 0;
+  clear: both;
+}
+
+/*---------------------------*/
+/* 7-3. BLOG COMMENTS 	 */
+/*---------------------------*/
+/* line 1370, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.commentsform_content {
+  width: 100%;
+  padding: 60px 0px 0px 0px;
+  margin: 20px 0 0 0;
+  text-align: center;
+}
+
+/* line 1376, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.comments_container {
+  width: 100%;
+  padding: 60px 0px 0px 0px;
+  margin: 20px 0 0 0;
+  text-align: center;
+}
+
+/* line 1383, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.commentlist {
+  padding: 0;
+  margin: 0px 0 40px 0;
+  list-style: none;
+  text-align: left;
+}
+
+/* line 1389, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.commentlist li {
+  padding: 20px 0;
+  margin: 0px 0 10px 0;
+  line-height: 25px;
+  list-style: none;
+  border-bottom: 1px #e7e6e6 solid;
+}
+
+/* line 1396, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.commentlist li p {
+  padding-bottom: 10px;
+}
+
+/* line 1399, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.commentmetadata {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* line 1403, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.commentlist li img {
+  width: auto;
+  margin: 0 20px 20px 0;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+
+/* line 1410, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+img.avatar {
+  float: left;
+}
+
+/*===============================================*/
+/* 8. PHOTO GALLERY		 						 */
+/*===============================================*/
+/* line 1422, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.photos_grid {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+/* line 1429, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.photos_grid figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  background: #3085a3;
+  text-align: center;
+  cursor: pointer;
+  max-height: 300px;
+}
+
+/* line 1438, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.photos_grid figure img {
+  position: relative;
+  display: block;
+  max-width: 100%;
+  opacity: 0.5;
+}
+
+/* line 1444, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.photos_grid figure figcaption {
+  padding: 0;
+  color: #fff;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* line 1450, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.photos_grid figure figcaption::before,
+.photos_grid figure figcaption::after {
+  pointer-events: none;
+}
+
+/* line 1454, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.photos_grid figure figcaption,
+.photos_grid figure figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 1462, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.photos_grid figure figcaption > a {
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+}
+
+/* line 1469, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.photos_grid figure h2 {
+  font-weight: 300;
+}
+
+/* line 1472, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.photos_grid figure h2 span {
+  font-weight: 800;
+  color: #ef6f5e;
+}
+
+/* line 1476, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.photos_grid figure h2,
+.photos_grid figure p {
+  margin: 0;
+}
+
+/* line 1480, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.photos_grid figure p {
+  font-size: 13px;
+  text-align: center;
+  padding: 15px 20%;
+  line-height: 20px;
+}
+
+/* line 1486, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.photos_grid figure strong {
+  font-size: 13px;
+  text-align: center;
+  padding: 10px 0;
+  line-height: 20px;
+  width: 30%;
+  margin: auto;
+  display: block;
+  background-color: #ef6f5e;
+}
+
+/* line 1496, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.photos14 {
+  width: 25%;
+  float: left;
+  margin: 0;
+}
+
+/* line 1501, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+figure.effect-photos {
+  background: #000;
+}
+
+/* line 1504, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+figure.effect-photos img {
+  max-width: none;
+  width: -webkit-calc(100% + 60px);
+  width: calc(100% + 60px);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-50px, 0, 0);
+  transform: translate3d(-50px, 0, 0);
+}
+
+/* line 1513, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+figure.effect-photos figcaption::before {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  left: 30px;
+  border: 1px solid #fff;
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-20px, 0, 0);
+  transform: translate3d(-20px, 0, 0);
+}
+
+/* line 1527, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+figure.effect-photos figcaption {
+  padding: 0;
+  text-align: left;
+}
+
+/* line 1531, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+figure.effect-photos h2 {
+  padding: 15% 0 0 0px;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+}
+
+/* line 1537, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+figure.effect-photos p {
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-10px, 0, 0);
+  transform: translate3d(-10px, 0, 0);
+}
+
+/* line 1544, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+figure.effect-photos strong {
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-10px, 0, 0);
+  transform: translate3d(-10px, 0, 0);
+}
+
+/* line 1551, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+figure.effect-photos:hover img {
+  opacity: 0.8;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 1556, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+figure.effect-photos:hover figcaption::before,
+figure.effect-photos:hover p,
+figure.effect-photos:hover strong {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/*===============================================*/
+/* 9. FORMS		 						 */
+/*===============================================*/
+/* line 1567, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.form_content {
+  width: 100%;
+  padding: 40px 0px 0px 0px;
+}
+
+/* line 1571, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.form_content_rsvp {
+  float: left;
+  width: 80%;
+  margin: 0 10% 80px 10%;
+}
+
+/* line 1576, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.form_section {
+  width: 100%;
+  padding: 0 0 60px 0;
+  float: left;
+  clear: both;
+}
+
+/* line 1582, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+h3.form_subtitle {
+  text-align: center;
+  font-weight: 800;
+  font-size: 20px;
+  padding: 0 0 60px 0;
+  margin: 0;
+  clear: both;
+  color: #ef6f5e;
+  position: relative;
+  width: 100%;
+}
+
+/* line 1593, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+h3.form_subtitle:after {
+  content: ' ';
+  position: absolute;
+  display: block;
+  width: 5%;
+  margin: 10px 47.5%;
+  border: 1px solid #000;
+}
+
+/* line 1601, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+h3.form_toptitle {
+  text-align: center;
+  font-weight: 800;
+  font-size: 26px;
+  padding: 0;
+  clear: both;
+}
+
+/* line 1608, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.form_row {
+  float: left;
+  padding: 0;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+/* line 1614, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.form_row label {
+  float: left;
+  font-size: 14px;
+  text-align: left;
+  padding: 0 0 15px 0;
+  font-weight: 800;
+}
+
+/* line 1621, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.form_row_full {
+  width: 100%;
+  float: left;
+  clear: both;
+  padding: 0;
+  margin: 0 0 25px 0;
+}
+
+/* line 1628, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.form_row_full label {
+  width: 100%;
+  float: left;
+  clear: both;
+  font-size: 14px;
+  text-align: left;
+  padding: 0 0 10px 0;
+  font-weight: 800;
+}
+
+/* line 1637, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+input.form_input {
+  width: 96%;
+  height: 39px;
+  padding: 3px 2%;
+  background-color: #ffffff;
+  border: none;
+  border-bottom: 1px #e7e6e6 solid;
+  -webkit-appearance: none;
+}
+
+/* line 1646, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+input.form_input:focus {
+  border-bottom: 1px #ef6f5e solid;
+}
+
+/* line 1649, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+textarea.form_textarea_full {
+  width: 98%;
+  height: 140px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  border: none;
+  border-bottom: 1px #e7e6e6 solid;
+  float: left;
+  padding: 10px 1% 0 1%;
+  font-size: 14px;
+  -webkit-appearance: none;
+}
+
+/* line 1661, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+textarea.form_textarea_full:focus {
+  border-bottom: 1px #ef6f5e solid;
+}
+
+/* line 1664, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+input.form_submit_contact {
+  border: 1px #e7e6e6 solid;
+  background-color: #fff;
+  cursor: pointer;
+  margin: 5px 0 0 0;
+  padding: 15px 75px;
+  text-align: center;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  -webkit-transition: all .2s ease-out;
+  -moz-transition: all .2s ease-out;
+  -o-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+  -webkit-appearance: none;
+}
+
+/* line 1680, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+input.form_submit_contact:hover {
+  border: 1px #ef6f5e solid;
+  background-color: #ef6f5e;
+  color: #fff;
+}
+
+/* line 1685, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.select_container {
+  width: 96%;
+  color: #e8a900;
+  float: left;
+  padding: 8px 2%;
+  border-bottom: 1px #e7e6e6 solid;
+  overflow: hidden;
+  background-color: #fff;
+  background: #fff url("arrowdown.gif") no-repeat 95% 50%;
+}
+
+/* line 1696, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+select.form_select {
+  width: 100%;
+  height: 30px;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  background-image: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 5px;
+  margin: 0px;
+}
+
+/* line 1709, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.checkbox_container {
+  text-align: left;
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+
+/* line 1714, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.checkbox_container label {
+  cursor: pointer;
+}
+
+/* line 1717, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.checkbox_container label span {
+  color: #ef6f5e;
+}
+
+/* line 1720, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* line 1723, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+input[type="checkbox"] + label:before {
+  border: none;
+  content: "\00a0";
+  display: inline-block;
+  font-size: 25px;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -khtml-border-radius: 15px;
+  margin: 0 20px 0 0;
+  padding: 0;
+  vertical-align: center;
+  background-color: #fff;
+  border: 1px #ef6f5e solid;
+}
+
+/* line 1739, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+input[type="checkbox"]:checked + label:before {
+  color: #ef6f5e;
+  content: "\2713";
+  text-align: center;
+  background-color: #ffffff;
+}
+
+/* line 1745, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+input[type="checkbox"]:checked + label:after {
+  font-weight: bold;
+}
+
+/* line 1750, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+label.error {
+  width: 60%;
+  display: block;
+  float: left;
+  color: red;
+  padding: 10px 0 0 0px;
+  background: none;
+  text-align: left;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+/* line 1761, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+label#loader {
+  width: 100%;
+  text-align: center;
+}
+
+/*===============================================*/
+/* 10. FOOTER	 						 */
+/*===============================================*/
+/* line 1769, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+#footer {
+  width: 100%;
+  clear: both;
+  float: left;
+  background-color: #f6f6f4;
+}
+
+/* line 1775, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.footer_centered_title {
+  width: 100%;
+  text-align: center;
+  padding: 0px 0 40px 0;
+}
+
+/* line 1780, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.footer_centered_title h2 {
+  font-size: 40px;
+  letter-spacing: -1px;
+  font-weight: 900;
+  padding: 0 0 10px 0;
+  margin: 0px;
+  line-height: 40px;
+}
+
+/* line 1788, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.footer_centered_title h2 span {
+  font-family: 'Clicker Script', cursive;
+  font-weight: 400;
+  color: #ef6f5e;
+}
+
+/* line 1793, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.footer_rsvp {
+  width: 100%;
+  text-align: center;
+  padding: 0 0 60px 0;
+}
+
+/* line 1798, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.footer_rsvp a {
+  display: inline-block;
+  border: 2px #ef6f5e solid;
+  padding: 15px 50px;
+  color: #ef6f5e;
+  vertical-align: middle;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f6f6f4;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+/* line 1813, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.footer_rsvp a::before,
+.footer_rsvp a::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 100%;
+  left: 0;
+  z-index: -1;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+  transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+
+/* line 1827, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.footer_rsvp a::before {
+  background: #fedbd5;
+}
+
+/* line 1830, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.footer_rsvp a::after {
+  background: #ef6f5e;
+}
+
+/* line 1833, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.footer_rsvp a:hover {
+  color: #fff;
+}
+
+/* line 1836, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.footer_rsvp a:hover::before,
+.footer_rsvp a:hover::after {
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+}
+
+/* line 1841, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.footer_rsvp a:hover::after {
+  -webkit-transition-delay: 0.175s;
+  transition-delay: 0.175s;
+}
+
+/* line 1845, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.footer_social_links {
+  width: 100%;
+  text-align: center;
+}
+
+/* line 1849, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.footer_social_links ul {
+  padding: 0px;
+  list-style: none;
+  margin: 0;
+}
+
+/* line 1854, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.footer_social_links ul li {
+  padding: 0px;
+  margin: 0px;
+  display: inline-block;
+}
+
+/* line 1859, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.footer_social_links ul li a {
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  padding: 0 20px;
+  margin: 0px;
+  display: inline-block;
+  color: #565656;
+}
+
+/* line 1868, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.footer_social_links ul li a:hover {
+  color: #ef6f5e;
+}
+
+/* line 1871, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.footer_menu {
+  width: 100%;
+  text-align: center;
+  padding: 40px 0 0 0;
+}
+
+/* line 1876, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.footer_menu ul {
+  padding: 0px;
+  list-style: none;
+  margin: 0;
+}
+
+/* line 1881, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.footer_menu ul li {
+  padding: 0px;
+  margin: 0px;
+  display: inline-block;
+}
+
+/* line 1886, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.footer_menu ul li a {
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  padding: 0 20px 0 0;
+  margin: 0px;
+  display: inline-block;
+  color: #ef6f5e;
+  border-bottom: 1px solid #ef6f5e;
+  line-height: 0.1em;
+}
+
+/* line 1897, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.footer_menu ul li.selected a {
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  padding: 0 20px 0 0;
+  margin: 0px;
+  display: inline-block;
+  color: #565656;
+  border-bottom: 1px solid #ef6f5e;
+  line-height: 0.1em;
+}
+
+/* line 1908, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.footer_menu ul li:first-child a {
+  padding: 0 20px 0 20px;
+}
+
+/* line 1911, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.footer_menu ul li a span {
+  background: #f6f6f4;
+  padding: 0 10px;
+}
+
+/* line 1915, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.footer_menu ul li a:hover {
+  color: #565656;
+}
+
+/* line 1919, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.nopadding {
+  padding: 0;
+}
+
+/* line 1922, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.nopaddingtop {
+  padding-top: 0;
+}
+
+/* line 1925, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+.nopaddingbottom {
+  padding-bottom: 0;
+}
+
+/*===============================================*/
+/* 11. MEDIA QUERIES   			 */
+/*===============================================*/
+/* Mobile Menu Media Queries
+/*-----------------------------------------------------------------------------------*/
+@media all and (max-width: 768px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
+  /* line 1934, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .intro-effect-push .header {
+    margin: 50px 0 0 0;
+  }
+
+  /* line 1937, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  #main_menu {
+    height: 50px;
+  }
+
+  /* line 1940, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  #main_menu ul {
+    width: 100%;
+    display: none;
+    text-align: left;
+    background-color: #fff;
+    margin: 50px 0 0 0;
+    border-top: 1px #f6f6f6 solid;
+  }
+
+  /* line 1948, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  #main_menu ul li {
+    width: 100%;
+  }
+
+  /* line 1951, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  #main_menu ul li, #main_menu ul ul li a, #main_menu ul ul ul li a, #main_menu ul ul ul li:last-child a {
+    border-bottom: 1px #f6f6f6 solid;
+  }
+
+  /* line 1954, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  #main_menu.menuwhite ul li a {
+    width: 100%;
+    font-size: 14px;
+    line-height: 50px;
+    height: auto;
+    margin: 0px;
+    color: #454545;
+  }
+
+  /* line 1962, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  #main_menu > ul > li {
+    float: none;
+  }
+
+  /* line 1966, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  #main_menu ul ul li a {
+    margin: 0 0 0 0;
+    padding: 0px 0px;
+    font-size: 12px;
+    font-weight: 700;
+    width: auto;
+    height: auto;
+  }
+
+  /* line 1974, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  #main_menu ul ul li:last-child a {
+    border-bottom: none;
+  }
+
+  /* line 1977, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  #main_menu ul ul ul li a {
+    margin: 0 0 0 40px;
+    padding: 0 0px 10px 0;
+  }
+
+  /* line 1982, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  #main_menu ul ul, #main_menu ul ul ul {
+    position: relative;
+    left: 0;
+    width: 80%;
+    margin: 0 0 10px 10%;
+    top: 0;
+    border-top: none;
+    border-radius: 0px;
+    background: none;
+  }
+
+  /* line 1992, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  #main_menu ul ul li, #main_menu ul ul ul li {
+    border-bottom: none;
+  }
+
+  /* line 1995, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  #menu-button {
+    display: block;
+  }
+
+  /* line 1998, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  #menu-button:before {
+    content: "";
+    position: absolute;
+    top: 0.25em;
+    left: 0;
+    width: 1em;
+    height: 0.125em;
+    border-top: 0.375em double #ef6f5e;
+    border-bottom: 0.135em solid #ef6f5e;
+  }
+
+  /* line 2008, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  #main_menu .submenu-button {
+    position: absolute;
+    z-index: 99;
+    right: 0;
+    top: 0;
+    display: block;
+    height: 49px;
+    width: 50px;
+    cursor: pointer;
+    border-left: 1px solid #f6f6f6;
+    background-color: #fff;
+  }
+
+  /* line 2020, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  #main_menu ul ul .submenu-button {
+    height: 35px;
+    width: 35px;
+  }
+
+  /* line 2024, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  #main_menu .submenu-button:after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 17px;
+    display: block;
+    width: 0;
+    padding: 0;
+    border: 5px solid transparent;
+    border-top-color: #333;
+  }
+
+  /* line 2035, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  #main_menu ul ul .submenu-button:after {
+    border-width: 4px;
+    left: 14px;
+    top: 15px;
+  }
+
+  /* line 2040, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  #main_menu .submenu-button.submenu-opened:after {
+    top: 15px;
+    border-top-color: transparent;
+    border-bottom-color: #333;
+  }
+
+  /* line 2045, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  #main_menu ul ul .submenu-button.submenu-opened:after {
+    top: 10px;
+  }
+}
+/*===============================================*/
+/* MEDIA QUERIES laptop 1400	  			 */
+/*===============================================*/
+@media screen and (max-width: 1400px) {
+  /* line 2055, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .title_container {
+    margin: 100px auto 0 auto;
+  }
+}
+/*===============================================*/
+/* MEDIA QUERIES mobile 680	  					 */
+/*===============================================*/
+@media screen and (max-width: 680px) {
+  /* line 2065, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .section_full {
+    width: 100%;
+    padding: 80px 0;
+    clear: both;
+    float: left;
+    margin: auto;
+  }
+
+  /* line 2072, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .section_centered {
+    width: 90%;
+    padding: 80px 0;
+    clear: both;
+    margin: auto;
+  }
+
+  /* line 2078, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .full_width {
+    width: 100%;
+    margin: 0 0 60px 0;
+    float: left;
+    clear: both;
+  }
+
+  /* line 2084, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .left23 {
+    width: 98%;
+    float: left;
+    margin: 0 0 60px 1%;
+    clear: both;
+  }
+
+  /* line 2090, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .left12 {
+    width: 98%;
+    float: left;
+    margin: 0 0 60px 1%;
+    clear: both;
+  }
+
+  /* line 2096, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .left12_last {
+    width: 98%;
+    float: left;
+    margin: 0 0 60px 1%;
+  }
+
+  /* line 2101, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .left13 {
+    width: 98%;
+    float: left;
+    margin: 0 0 80px 1%;
+  }
+
+  /* line 2106, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .left13_last {
+    width: 98%;
+    float: left;
+    margin: 0 0 80px 1%;
+  }
+
+  /* line 2111, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .left14 {
+    width: 98%;
+    float: left;
+    margin: 0 0 80px 1%;
+  }
+
+  /* line 2116, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .left14_last {
+    width: 98%;
+    float: left;
+    margin: 0 0 80px 1%;
+  }
+
+  /* line 2121, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .left15 {
+    width: 98%;
+    float: left;
+    margin: 0 0 80px 1%;
+  }
+
+  /* line 2126, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .left15_last {
+    width: 98%;
+    float: left;
+    margin: 0 0 80px 1%;
+  }
+
+  /* line 2131, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .carousel14_listing {
+    width: 45%;
+    float: left;
+    text-align: center;
+    margin: 0 2.5% 40px 2.5%;
+  }
+
+  /* line 2137, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .carousel15_listing {
+    width: 45%;
+    float: left;
+    text-align: center;
+    margin: 0 2.5% 40px 2.5%;
+  }
+
+  /* line 2143, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .imageblock-img {
+    position: relative;
+    max-width: 100%;
+    display: block;
+    float: left;
+  }
+
+  /* line 2149, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .imageblock-text-right {
+    width: 90%;
+    right: auto;
+    top: auto;
+    float: left;
+    clear: both;
+    position: relative;
+    color: #fff;
+    padding: 5%;
+    margin: 10px 0 0 0;
+    z-index: 888;
+  }
+
+  /* line 2161, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .location_row_white {
+    height: auto;
+  }
+
+  /* line 2164, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .phone_row_white {
+    height: auto;
+  }
+
+  /* line 2167, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .header {
+    background-position: right top;
+  }
+}
+/*===============================================*/
+/* MEDIA QUERIES mobile 480	  					 */
+/*===============================================*/
+@media screen and (max-width: 480px) {
+  /* line 2176, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .title_container {
+    width: 85%;
+    margin: 70px auto 0 auto;
+    height: 62%;
+    padding: 15% 0 5% 0;
+  }
+
+  /* line 2183, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .title_up {
+    font-size: 50px;
+    line-height: 50px;
+  }
+
+  /* line 2187, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .title_down {
+    font-size: 50px;
+    line-height: 50px;
+  }
+
+  /* line 2191, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .title_middle {
+    font-size: 50px;
+    line-height: 50px;
+  }
+
+  /* line 2196, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .title_frame img {
+    max-width: 50%;
+  }
+
+  /* line 2200, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .centered_title {
+    padding: 0px 0 20px 0;
+  }
+
+  /* line 2203, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .centered_title h2 {
+    font-size: 25px;
+    letter-spacing: -0.5px;
+    padding: 0 0 0 0;
+    line-height: 30px;
+  }
+
+  /* line 2209, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  p.under_title_descr {
+    font-size: 12px;
+    font-weight: 400;
+    padding: 0 0px;
+    border-bottom: none;
+    line-height: 22px;
+  }
+
+  /* line 2216, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .countdown_container_inner {
+    padding: 60px 0 60px 0;
+  }
+
+  /* line 2219, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .countdown_container h2 {
+    padding: 0px 0 40px 0;
+    font-size: 16px;
+  }
+
+  /* line 2223, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .countdown_section {
+    padding: 20px 3% 40px 3%;
+    font-size: 14px;
+  }
+
+  /* line 2227, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  span.countdown_amount {
+    font-size: 25px;
+  }
+
+  /* line 2230, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .blogentry {
+    width: 100%;
+    display: block;
+    margin: 0 0;
+  }
+
+  /* line 2235, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .form_content_rsvp {
+    float: left;
+    width: 100%;
+    margin: 0 0 60px 0;
+  }
+
+  /* line 2240, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .checkbox_container {
+    text-align: left;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+
+  /* line 2245, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  input[type="checkbox"] + label:before {
+    font-size: 15px;
+  }
+
+  /* line 2248, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .checkbox_container label {
+    font-size: 12px;
+  }
+
+  /* line 2251, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .form_row {
+    margin-bottom: 10px;
+  }
+
+  /* line 2254, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .form_row label {
+    padding: 0 0 10px 0;
+  }
+
+  /* line 2257, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  input.form_submit_contact {
+    padding: 15px 25px;
+  }
+
+  /* line 2260, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  h3.form_subtitle {
+    font-size: 16px;
+    padding: 0 0 40px 0;
+  }
+
+  /* line 2264, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .photos14 {
+    width: 100%;
+    float: left;
+    margin: 0;
+  }
+
+  /* line 2269, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .carousel14 h3, .carousel14_listing h3, .carousel15_listing h3 {
+    font-size: 12px;
+    letter-spacing: -0.5px;
+  }
+
+  /* line 2274, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  #gifts_section {
+    margin-top: 20px;
+    clear: both;
+  }
+
+  /* line 2278, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .gifts_content ul li {
+    padding: 0 0 0 0;
+    width: 40%;
+  }
+
+  /* line 2282, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .gifts_content ul li a img {
+    max-width: 90%;
+  }
+
+  /* line 2285, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .footer_centered_title h2 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  /* line 2289, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .footer_social_links ul li a {
+    padding: 10px;
+  }
+
+  /* line 2292, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .footer_menu ul li a {
+    font-size: 12px;
+    padding: 5px;
+    border-bottom: none;
+    line-height: 18px;
+  }
+
+  /* line 2298, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .footer_menu ul li.selected a {
+    font-size: 12px;
+    padding: 5px;
+    border-bottom: none;
+    line-height: 18px;
+  }
+
+  /* line 2304, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .footer_menu ul li:first-child a {
+    padding: 5px;
+  }
+
+  /* line 2307, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .footer_menu ul li a span {
+    padding: 10px;
+  }
+}
+/*===============================================*/
+/* MEDIA QUERIES mobile 340	  					 */
+/*===============================================*/
+@media screen and (max-width: 340px) {
+  /* line 2316, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .title_container {
+    width: 85%;
+    border: 8px #fff solid;
+    margin: 70px auto 0 auto;
+    height: 52%;
+    padding: 10% 0 10% 0;
+  }
+
+  /* line 2323, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .title_up {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  /* line 2327, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .title_down {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  /* line 2331, /Users/rafidhoda/Wedding/annierafid/app/assets/stylesheets/application.scss */
+  .title_middle {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
