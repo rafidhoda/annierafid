@@ -240,7 +240,7 @@
  margin: 0 auto;
  width: 100%;
  overflow:hidden;
- background:url(header-bg.jpg) #474546;
+ background:image-url('header-bg.jpg') #474546;
  -webkit-background-size: 100%;
  -moz-background-size: 100%;
  -o-background-size: 100%;
