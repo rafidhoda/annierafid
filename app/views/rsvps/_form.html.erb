@@ -1,6 +1,17 @@
 <div class="form_content_rsvp">
       <h3 class="form_toptitle" id="Note"></h3>
       <%= simple_form_for(@rsvp) do |f| %>
+      <% if rsvp.errors.any? %>
+    <div id="error_explanation">
+      <h2>Please fill in all fields:</h2>
+
+      <ul>
+      <% rsvp.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 
  <h3 class="form_subtitle">GUEST DETAILS &amp; COMMENTS</h3>
       <div class="form_section">
