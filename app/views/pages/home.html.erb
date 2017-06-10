@@ -36,14 +36,22 @@
 
 	 <!-- End of Section About Us -->
 
-        <div id="countdown_home" class="countdown_container">
-				<div class="countdown_container_inner block" data-move-y="200px" data-move-x="0px">
-					<h2>WE'RE GETTING HITCHED: 09.08.2017</h2>
-          <center><%= image_tag 'up.gif', style: "max-width: 500px; width: 100%" %></center>
-          <h2 style="margin-top: 30px">WEDDING PARTY: 12.08.2017</h2>
-          <%= link_to 'RSVP', '/rsvp', class: 'countdown_rsvp fade-page' %>
-			</div>
-            </div>
+<section style="background-color: #fbf8f2;">
+  <div class="section_centered">
+
+		<div class="centered_title">
+			<h2>Wedding Date</h2>
+			<p class="under_title_descr"><span style="background: #fbf8f2">We're getting married on the 9th of August 2017</span></p>
+		</div>
+
+       <div class="about_section" style="margin-top: -30px">
+           <p><center><%= image_tag 'up.gif', style: "max-width: 500px; width: 100%" %></center></p>
+           <p style="text-align: left">The wedding registration will take place on the 9th of August 2017 in Moscow. We are having a wedding party for friends and family on <strong>Saturday, the 12th of August</strong>. Please let us know if you are coming by RSVPing.</p>
+
+           <%= link_to 'RSVP', '/rsvp', class: 'countdown_rsvp fade-page', style: 'margin-top: 10px' %>
+       </div>
+  </div>
+</section>
 
 	 <!-- End of Section Countdown -->
 
