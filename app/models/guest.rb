@@ -1,3 +1,3 @@
 class Guest < ApplicationRecord
-  belongs_to :rsvp
+  belongs_to :rsvp, optional: true
 end

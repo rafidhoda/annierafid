@@ -1,35 +1,52 @@
 <div class="form_content_rsvp">
       <h3 class="form_toptitle" id="Note"></h3>
-      <%= form_with(model: rsvp, local: true) do |form| %>
+      <%= simple_form_for(@rsvp) do |f| %>
 
  <h3 class="form_subtitle">GUEST DETAILS &amp; COMMENTS</h3>
       <div class="form_section">
           <div class="form_row left14">
           <label>FIRST NAME</label>
-          <%= form.text_field :first_name, id: :rsvp_first_name, class: 'form_input required', placeholder: 'Elon' %>
+          <%= f.text_field :first_name, id: :rsvp_first_name, class: 'form_input required', placeholder: 'Elon' %>
           </div>
           <div class="form_row left14">
           <label>LAST NAME</label>
-          <%= form.text_field :last_name, id: :rsvp_last_name, class: 'form_input required', placeholder: 'Musk' %>
+          <%= f.text_field :last_name, id: :rsvp_last_name, class: 'form_input required', placeholder: 'Musk' %>
           </div>
           <div class="form_row left14">
           <label>EMAIL</label>
-          <%= form.text_field :email, id: :rsvp_email, class: 'form_input required email', placeholder: 'elon@tesla.com' %>
+          <%= f.text_field :email, id: :rsvp_email, class: 'form_input required email', placeholder: 'elon@tesla.com' %>
           </div>
           <div class="form_row left14_last">
           <label>PHONE</label>
-          <%= form.text_field :phone_number, id: :rsvp_phone_number, class: 'form_input required', placeholder: '+7 925 712 53 11' %>
+          <%= f.text_field :phone_number, id: :rsvp_phone_number, class: 'form_input required', placeholder: '+7 925 712 53 11' %>
           </div>
-          <div class="form_row_full">
+          <div class="form_row left12">
           <label>OTHER COMMENTS</label>
-          <%= form.text_area :comments, id: :rsvp_comments, class: 'form_textarea_full', placeholder: 'Anything you\'d like us to know about? Write it here' %>
+          <%= f.text_area :comments, id: :rsvp_comments, class: 'form_textarea_full', placeholder: 'Anything you\'d like us to know about? Write it here' %>
           </div>
-          <div class="form_row">
-
-            <%= form.submit 'Send RSVP', class: 'form_submit_contact' %>
-
+          <div class="form_row left12_last">
+            <label>ADD GUESTS</label>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                </tr>
+              </thead>
+              <tbody class="fields">
+                <%= f.simple_fields_for :guests do |builder| %>
+                  <%= render 'guest', f: builder %>
+                <% end %>
+              </tbody>
+            </table>
+            <div class="">
+              <%= link_to_add_row('Add Guest', f, :guests, class: 'simple_button fade-page') %>
+            </div>
           </div>
      </div>
-
+       <center>
+         <%= f.submit 'Send RSVP', class: 'form_submit_contact' %>
+       </center>
       <% end %>
 </div>

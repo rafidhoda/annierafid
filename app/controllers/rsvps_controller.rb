@@ -15,10 +15,12 @@ class RsvpsController < ApplicationController
   # GET /rsvps/new
   def new
     @rsvp = Rsvp.new
+    @rsvp.guests.build
   end
 
   # GET /rsvps/1/edit
   def edit
+    @rsvp.guests.build
   end
 
   # POST /rsvps
@@ -69,6 +71,6 @@ class RsvpsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def rsvp_params
-      params.require(:rsvp).permit(:first_name, :last_name, :email, :phone_number, :comments)
+      params.require(:rsvp).permit(:first_name, :last_name, :email, :phone_number, :comments, guests_attributes: [:id, :_destroy, :rsvp_id, :first_name, :last_name])
     end
 end
