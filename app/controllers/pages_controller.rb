@@ -4,4 +4,7 @@ class PagesController < ApplicationController
 
   def visa
   end
+
+  def location
+  end
 end

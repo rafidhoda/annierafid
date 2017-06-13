@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   get 'visa' => 'pages#visa'
 
+  get 'location' => 'pages#location'
+
   resources :charges
   # post 'charges/:gift', to: 'charges#gift'
 
