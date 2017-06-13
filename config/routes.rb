@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   resources :rsvps
   root 'pages#home'
 
+  get 'guestbook', to: 'posts#index'
+
   get 'rsvp', to: 'rsvps#new'
 
   get 'gift', to: 'gifts#new'

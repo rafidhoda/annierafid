@@ -1,29 +1,29 @@
+<div class="container text-center" style="margin-top: 100px">
+
 <p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
+<h1>Guestbook</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Body</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<h3><%= link_to 'Add a Post', new_post_path, class: 'countdown_rsvp fade-page', style: 'margin-top: 0px' %></h3>
 
-  <tbody>
+<!-- Projects Row -->
+  <div class="row" style="max-width: 500px; margin: 0 auto;">
     <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.body %></td>
-        <td><%= post.user %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <div class="col-md-12" style="margin-top: 40px">
+      <div class="panel panel-default">
+        <div class="panel-heading">Posted by <%= post.user.first_name %>  <%= post.user.last_name %> <%= time_ago_in_words(post.created_at) %> ago</div>
+        <div class="panel-body">
+          <p style="margin-bottom: 10px"><%= post.body %></p>
+          <% if post.post_image? %>
+          <%= link_to post do %>
+            <%= image_tag post.post_image(:large), style: "max-width: 440px; width: 100%" %>
+          <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
     <% end %>
-  </tbody>
-</table>
+  </div>
+  <!-- /.row -->
 
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+  </div>

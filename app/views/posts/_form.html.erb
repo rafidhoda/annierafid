@@ -1,11 +1,16 @@
 <%= simple_form_for(@post) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :body %>
+  <div class="col-md-12">
+  <label>POST</label>
+  <%= f.text_area :body, class: 'form_textarea_full', placeholder: 'Got a funny story about us to tell? Just want to congratulate? Write it here!' %>
+  </div>
+
+  <div class="form-group">
+   <%= f.file_field :post_image, id:"file-input" %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <center><%= f.button :submit, class: 'simple_button fade-page', style: 'margin-top: 30px' %></center>
   </div>
 <% end %>
