@@ -18,7 +18,8 @@
     	<ul>
     		<li><%= link_to 'HOME', root_path, class: 'selected fade-page' %></li>
         <li><%= link_to 'LOCATION', root_path, class: 'fade-page' %></li>
-        <li><%= link_to 'GIVE A GIFT', '/gift', class: 'fade-page' %></li>
+        <li><%= link_to 'GUESTBOOK', guestbook_path, class: 'fade-page' %></li>
+        <li><%= link_to 'GIFT', '/gift', class: 'fade-page' %></li>
         <li><%= link_to 'VISA', '/visa', class: 'fade-page' %></li>
         <li><%= link_to 'RSVP', '/rsvp', class: 'fade-page' %></li>
         <% if(!user_signed_in?) %>
