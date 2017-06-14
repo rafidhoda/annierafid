@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   resources :posts
-  devise_for :users
   resources :gifts
   resources :guests
   resources :rsvps
+
+  devise_for :users
+
   root 'pages#home'
 
   get 'guestbook', to: 'posts#index'
