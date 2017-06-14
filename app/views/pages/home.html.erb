@@ -6,6 +6,7 @@
   </div>
 </header>
 
+
 <div class="content">
     <div id="about_home" class="section_centered">
 
@@ -34,72 +35,71 @@
 
             </div>
 
-	 <!-- End of Section About Us -->
+            <!-- End of Section About Us -->
 
-<section style="background-color: #fbf8f2;">
-  <div class="section_centered">
+         <section style="background-color: #fbf8f2;">
+           <div class="section_centered">
 
-		<div class="centered_title">
-			<h2>Wedding Date</h2>
-			<p class="under_title_descr"><span style="background: #fbf8f2">We're getting married on the 9th of August 2017</span></p>
-		</div>
+         		<div class="centered_title">
+         			<h2>Wedding Date</h2>
+         			<p class="under_title_descr"><span style="background: #fbf8f2">We're getting married on the 9th of August 2017</span></p>
+         		</div>
 
-       <div class="about_section" style="margin-top: -30px">
-           <p><center><%= image_tag 'up.gif', style: "max-width: 500px; width: 100%" %></center></p>
-           <p style="text-align: left">The wedding registration will take place on the 9th of August 2017 in Moscow. We are having a wedding party for friends and family on <strong>Saturday, the 12th of August</strong>. Please let us know if you are coming by RSVPing.</p>
+                <div class="about_section" style="margin-top: -30px">
+                    <p><center><%= image_tag 'up.gif', style: "max-width: 500px; width: 100%" %></center></p>
+                    <p style="text-align: left">The wedding registration will take place on the 9th of August 2017 in Moscow. We are having a wedding party for friends and family on <strong>Saturday, the 12th of August</strong>. Please let us know if you are coming by RSVPing.</p>
 
-           <%= link_to 'RSVP', '/rsvp', class: 'countdown_rsvp fade-page', style: 'margin-top: 10px' %>
+                    <%= link_to 'RSVP', '/rsvp', class: 'countdown_rsvp fade-page', style: 'margin-top: 10px' %>
+                </div>
+           </div>
+         </section>
+
+         <!-- End of Section Countdown -->
+
+        <div class="section_centered">
+
+      		<div class="centered_title">
+      			<h2>Give<span> a </span>gift</h2>
+      			<p class="under_title_descr"><span>You can give us a monetary gift if you want</span></p>
+      		</div>
+
+             <div class="about_section">
+                 <p><center><%= image_tag 'aladdin.gif', style: "max-width: 500px; width: 100%; margin-top: -30px" %></center></p>
+
+                 <%= link_to 'GIVE A GIFT', '/gift', class: 'countdown_rsvp fade-page', style: 'margin-top: 10px' %>
+             </div>
+        </div>
+
+       <!-- End of Section Blog -->
+
+       <div class="carousel_container">
+     	  <div class="section_centered">
+
+     		<div class="centered_title">
+     			<h2>BRIDEMAIDS <span>and</span> GROOMSMEN'S</h2>
+     			<p class="under_title_descr"><span>Best Man &amp; Maid of Honor</span></p>
+     		</div>
+
+
+           <center><h3>Coming soon...</h3></center>
+
        </div>
-  </div>
-</section>
+     <!-- End of Section Bridemades -->
 
-	 <!-- End of Section Countdown -->
+     <div id="photos_home" class="section_full">
 
-  <div class="section_centered">
+     		<div class="centered_title">
+     		<h2>Guestbook</h2>
+     		<p class="under_title_descr"><span>Sign our guestbook</span></p>
+     		</div>
 
-		<div class="centered_title">
-			<h2>Give<span> a </span>gift</h2>
-			<p class="under_title_descr"><span>You can give us a monetary gift if you want</span></p>
-		</div>
+             <div class="about_section" style="margin-top: -30px;">
+               <p style="text-align: center">We've set up a guestbook so that you can leave a message.</p>
 
-       <div class="about_section">
-           <p><center><%= image_tag 'aladdin.gif', style: "max-width: 500px; width: 100%; margin-top: -30px" %></center></p>
+               <p><center><%= image_tag 'loveit.gif', style: "max-width: 500px; width: 100%; margin-top: -20px" %></center></p>
 
-           <%= link_to 'GIVE A GIFT', '/gift', class: 'countdown_rsvp fade-page', style: 'margin-top: 10px' %>
-       </div>
-  </div>
+                <%= link_to 'GO TO GUESTBOOK', guestbook_path, class: 'countdown_rsvp fade-page', style: 'margin-top: 0px' %>
+            </div>
 
- <!-- End of Section Blog -->
-
-
-  <div class="carousel_container">
-	  <div class="section_centered">
-
-		<div class="centered_title">
-			<h2>BRIDEMAIDS <span>and</span> GROOMSMEN'S</h2>
-			<p class="under_title_descr"><span>Best Man &amp; Maid of Honor</span></p>
-		</div>
-
-		<div id="weddingcarousel" class="owl-carousel">
-      <center><h3>Coming soon...</h3></center>
-	  </div>
-  </div>
-<!-- End of Section Bridemades -->
-
-<div id="photos_home" class="section_full">
-
-		<div class="centered_title">
-		<h2>Guestbook</h2>
-		<p class="under_title_descr"><span>Sign our guestbook</span></p>
-		</div>
-
-        <div class="about_section" style="margin-top: -30px;">
-          <p style="text-align: center">We've set up a guestbook so that you can leave a message.</p>
-
-          <p><center><%= image_tag 'loveit.gif', style: "max-width: 500px; width: 100%; margin-top: -20px" %></center></p>
-
-           <%= link_to 'GO TO GUESTBOOK', guestbook_path, class: 'countdown_rsvp fade-page', style: 'margin-top: 0px' %>
-       </div>
-
-		<div class="clear"></div>
-</div>
+     		<div class="clear"></div>
+     </div>
