@@ -1,6 +1,6 @@
-<center><h2>Thank you for your <strong><%= @orig_amount %></strong> <%= @gift.currency %> gift!</h2></center>
+<center><h2><%= I18n.t "charges.thanks" %> <strong><%= @orig_amount %></strong> <%= @gift.currency %> <%= I18n.t "charges.gift" %></h2></center>
 
 <div style="margin: 30px 5px;">
   <center><img src="<%= @random_gif %>" style="max-width: 400px; width: 100%;"><br>
-  <h3><%= link_to 'Get back', 'https://www.annierafid.com' %></h3></center>
+  <h3><%= link_to t("charges.back"), 'https://www.annierafid.com' %></h3></center>
 </div>

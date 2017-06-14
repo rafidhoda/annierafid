@@ -1,8 +1,8 @@
 <div class="section_centered">
 
 	 <div class="centered_title">
-      <h2>Give <span>a</span> Gift</h2>
-      <p class="under_title_descr"><span>If you want to</span></p>
+      <h2><%= I18n.t "gifts.main_title" %></h2>
+      <p class="under_title_descr"><span><%= I18n.t "gifts.desc" %></span></p>
    </div>
 
   <%= render 'form', gift: @gift %>

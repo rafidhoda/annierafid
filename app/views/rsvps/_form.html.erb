@@ -3,8 +3,7 @@
       <%= simple_form_for(@rsvp) do |f| %>
       <% if rsvp.errors.any? %>
     <div id="error_explanation">
-      <h2>Please fill in all fields:</h2>
-
+      <h2><%= I18n.t "rsvp.errors.please" %></h2>
       <ul>
       <% rsvp.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -13,36 +12,36 @@
     </div>
   <% end %>
 
- <h3 class="form_subtitle">GUEST DETAILS &amp; COMMENTS</h3>
+ <h3 class="form_subtitle"><%= I18n.t "rsvp.form.title" %></h3>
       <div class="form_section">
           <div class="form_row left14">
-          <label>FIRST NAME</label>
-          <%= f.text_field :first_name, id: :rsvp_first_name, class: 'form_input required', placeholder: 'Elon' %>
+          <label><%= I18n.t "rsvp.form.first_name" %></label>
+          <%= f.text_field :first_name, id: :rsvp_first_name, class: 'form_input required', placeholder: t("rsvp.form.first_name_placeholder") %>
           </div>
           <div class="form_row left14">
-          <label>LAST NAME</label>
-          <%= f.text_field :last_name, id: :rsvp_last_name, class: 'form_input required', placeholder: 'Musk' %>
+          <label><%= I18n.t "rsvp.form.last_name" %></label>
+          <%= f.text_field :last_name, id: :rsvp_last_name, class: 'form_input required', placeholder: t("rsvp.form.last_name_placeholder") %>
           </div>
           <div class="form_row left14">
-          <label>EMAIL</label>
-          <%= f.text_field :email, id: :rsvp_email, class: 'form_input required email', placeholder: 'elon@tesla.com' %>
+          <label><%= I18n.t "rsvp.form.email" %></label>
+          <%= f.text_field :email, id: :rsvp_email, class: 'form_input required email', placeholder: t("rsvp.form.email_placeholder") %>
           </div>
           <div class="form_row left14_last">
-          <label>PHONE</label>
-          <%= f.text_field :phone_number, id: :rsvp_phone_number, class: 'form_input required', placeholder: '+7 925 712 53 11' %>
+          <label><%= I18n.t "rsvp.form.phone" %></label>
+          <%= f.text_field :phone_number, id: :rsvp_phone_number, class: 'form_input required', placeholder: t("rsvp.form.phone_placeholder") %>
           </div>
           <div class="form_row left12">
-          <label>OTHER COMMENTS</label>
-          <%= f.text_area :comments, id: :rsvp_comments, class: 'form_textarea_full', placeholder: 'Anything you\'d like us to know about? Write it here' %>
+          <label><%= I18n.t "rsvp.form.other_comments" %></label>
+          <%= f.text_area :comments, id: :rsvp_comments, class: 'form_textarea_full', placeholder: t("rsvp.form.other_comments_placeholder") %>
           </div>
           <div class="form_row left12_last">
-            <label>ADD GUESTS</label>
+            <label><%= I18n.t "rsvp.form.add_guests" %></label>
             <table class="table">
               <thead>
                 <tr>
                   <th></th>
-                  <th>First Name</th>
-                  <th>Last Name</th>
+                  <th><%= I18n.t "rsvp.form.guests.first_name" %></th>
+                  <th><%= I18n.t "rsvp.form.guests.last_name" %></th>
                 </tr>
               </thead>
               <tbody class="fields">
@@ -52,12 +51,12 @@
               </tbody>
             </table>
             <div class="">
-              <%= link_to_add_row('Add Guest', f, :guests, class: 'simple_button fade-page') %>
+              <%= link_to_add_row(t("rsvp.form.guests.add_guest_button"), f, :guests, class: 'simple_button fade-page') %>
             </div>
           </div>
      </div>
        <center>
-         <%= f.submit 'Send RSVP', class: 'form_submit_contact' %>
+         <%= f.submit t("rsvp.form.rsvp_button"), class: 'form_submit_contact' %>
        </center>
       <% end %>
 </div>

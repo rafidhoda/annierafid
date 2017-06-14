@@ -1,105 +1,99 @@
 <header class="header">
   <div class="title_container">
-       <div class="title_up">Annie</div>
-       <div class="title_down">&amp;Rafid</div>
+       <div class="title_up"><%= t "home.hero.annie" %></div>
+       <div class="title_down">&amp;<%= t "home.hero.rafid" %></div>
        <div class="title_date">09.08.2017</div>
   </div>
 </header>
 
 
 <div class="content">
-    <div id="about_home" class="section_centered">
-
-
-	   <div class="centered_title">
-				<h2>Annie<span> & </span>Rafid</h2>
-				<p class="under_title_descr"><span>We are getting married this August and you're invited!</span></p>
-            </div>
-
-
-
-               <div class="about_section">
-					 <div class="about_pic_container">
-
-						<div class="about_pic">
-              <%= image_tag 'together.jpg' %>
-            </div>
-					</div>
-						<h3>ANNIE & RAFID</h3>
-						<p style="text-align: left">Hi! We would like to welcome you to our wedding website. We are getting married on the 9th of August 2017. We're having a family only party on the 9th, but we're inviting all our friends and family on the 12th for a wedding party. The wedding will take place in Moscow, Russia. If you're a friend or relative of Annie or Rafid, then you're invited! Please let us know if you're coming by RSVPing. We hope to see you this August!</p>
-
-            <%= link_to 'Message Annie', 'https://www.facebook.com/annie.mushegyan', class: 'more_about fade-page' %>
-            <%= link_to 'Message Rafid', 'https://www.facebook.com/rafidhoda', class: 'more_about fade-page' %>
-
-               </div>
-
-            </div>
-
-            <!-- End of Section About Us -->
-
-         <section style="background-color: #fbf8f2;">
-           <div class="section_centered">
-
-         		<div class="centered_title">
-         			<h2>Wedding Date</h2>
-         			<p class="under_title_descr"><span style="background: #fbf8f2">We're getting married on the 9th of August 2017</span></p>
-         		</div>
-
-                <div class="about_section" style="margin-top: -30px">
-                    <p><center><%= image_tag 'up.gif', style: "max-width: 500px; width: 100%" %></center></p>
-                    <p style="text-align: left">The wedding registration will take place on the 9th of August 2017 in Moscow. We are having a wedding party for friends and family on <strong>Saturday, the 12th of August</strong>. Please let us know if you are coming by RSVPing.</p>
-
-                    <%= link_to 'RSVP', '/rsvp', class: 'countdown_rsvp fade-page', style: 'margin-top: 10px' %>
-                </div>
-           </div>
-         </section>
-
-         <!-- End of Section Countdown -->
-
-        <div class="section_centered">
-
-      		<div class="centered_title">
-      			<h2>Give<span> a </span>gift</h2>
-      			<p class="under_title_descr"><span>You can give us a monetary gift if you want</span></p>
-      		</div>
-
-             <div class="about_section">
-                 <p><center><%= image_tag 'aladdin.gif', style: "max-width: 500px; width: 100%; margin-top: -30px" %></center></p>
-
-                 <%= link_to 'GIVE A GIFT', '/gift', class: 'countdown_rsvp fade-page', style: 'margin-top: 10px' %>
-             </div>
+  <!-- About START -->
+  <div id="about_home" class="section_centered">
+    <div class="centered_title">
+      <h2><%= I18n.t "home.about.title.annie" %><span> & </span><%= I18n.t "home.about.title.rafid" %></h2>
+      <p class="under_title_descr"><span><%= I18n.t "home.about.desc" %></span></p>
+    </div>
+    <div class="about_section">
+      <div class="about_pic_container">
+        <div class="about_pic">
+          <%= image_tag 'together.jpg' %>
         </div>
+      </div>
+      <h3>ANNIE & RAFID</h3>
+      <p style="text-align: left"><%= t "home.about.text" %></p>
+      <%= link_to t("home.about.message.annie"), 'https://www.facebook.com/annie.mushegyan', class: 'more_about fade-page' %>
+      <%= link_to t("home.about.message.rafid"), 'https://www.facebook.com/rafidhoda', class: 'more_about fade-page' %>
+    </div>
+  </div>
+  <!-- About END -->
 
-       <!-- End of Section Blog -->
+  <!-- Wedding Date START -->
+  <section style="background-color: #fbf8f2;">
+   <div class="section_centered">
 
-       <div class="carousel_container">
-     	  <div class="section_centered">
+  		<div class="centered_title">
+  			<h2><%= I18n.t "home.wedding.title" %></h2>
+  			<p class="under_title_descr"><span style="background: #fbf8f2"><%= I18n.t "home.wedding.desc" %></span></p>
+  		</div>
 
-     		<div class="centered_title">
-     			<h2>BRIDEMAIDS <span>and</span> GROOMSMEN'S</h2>
-     			<p class="under_title_descr"><span>Best Man &amp; Maid of Honor</span></p>
-     		</div>
+        <div class="about_section" style="margin-top: -30px">
+            <p><center><%= image_tag 'up.gif', style: "max-width: 500px; width: 100%" %></center></p>
+            <p style="text-align: left"><%= I18n.t "home.wedding.text" %></p>
 
+            <%= link_to t("home.wedding.rsvp"), '/rsvp', class: 'countdown_rsvp fade-page', style: 'margin-top: 10px' %>
+        </div>
+   </div>
+  </section>
+  <!-- Wedding Date END -->
 
-           <center><h3>Coming soon...</h3></center>
+  <!-- Gift START -->
+  <div class="section_centered">
+		<div class="centered_title">
+			<h2><%= I18n.t "home.gift.title" %></h2>
+			<p class="under_title_descr"><span><%= I18n.t "home.gift.desc" %></span></p>
+		</div>
 
-       </div>
-     <!-- End of Section Bridemades -->
+     <div class="about_section">
+         <p><center><%= image_tag 'aladdin.gif', style: "max-width: 500px; width: 100%; margin-top: -30px" %></center></p>
 
-     <div id="photos_home" class="section_full">
-
-     		<div class="centered_title">
-     		<h2>Guestbook</h2>
-     		<p class="under_title_descr"><span>Sign our guestbook</span></p>
-     		</div>
-
-             <div class="about_section" style="margin-top: -30px;">
-               <p style="text-align: center">We've set up a guestbook so that you can leave a message.</p>
-
-               <p><center><%= image_tag 'loveit.gif', style: "max-width: 500px; width: 100%; margin-top: -20px" %></center></p>
-
-                <%= link_to 'GO TO GUESTBOOK', guestbook_path, class: 'countdown_rsvp fade-page', style: 'margin-top: 0px' %>
-            </div>
-
-     		<div class="clear"></div>
+         <%= link_to t("home.gift.button"), '/gift', class: 'countdown_rsvp fade-page', style: 'margin-top: 10px' %>
      </div>
+  </div>
+  <!-- Gift END -->
+
+  <!-- Bridemaids and Groomsmen START -->
+
+   <div class="carousel_container">
+  	  <div class="section_centered">
+
+  		<div class="centered_title">
+  			<h2><%= I18n.t "home.bridegroom.bridemaids" %> <span><%= I18n.t "home.bridegroom.and" %></span> <%= I18n.t "home.bridegroom.groomsmen" %></h2>
+  			<p class="under_title_descr"><span><%= I18n.t "home.bridegroom.desc" %></span></p>
+  		</div>
+
+
+       <center><h3><%= I18n.t "home.bridegroom.comingsoon" %></h3></center>
+
+   </div>
+
+   <!-- Bridemaids and Groomsmen END -->
+
+   <!-- Guestbook START -->
+
+   <div id="photos_home" class="section_full">
+   		<div class="centered_title">
+   		<h2><%= I18n.t "home.guestbook.title" %></h2>
+   		<p class="under_title_descr"><span><%= I18n.t "home.guestbook.desc" %></span></p>
+   		</div>
+           <div class="about_section" style="margin-top: -30px;">
+             <p style="text-align: center"><%= I18n.t "home.guestbook.text" %></p>
+
+             <p><center><%= image_tag 'loveit.gif', style: "max-width: 500px; width: 100%; margin-top: -20px" %></center></p>
+
+              <%= link_to t("home.guestbook.button"), guestbook_path, class: 'countdown_rsvp fade-page', style: 'margin-top: 0px' %>
+          </div>
+
+   		<div class="clear"></div>
+   </div>
+   <!-- Guestbook END -->

@@ -1,10 +1,8 @@
 <div class="section_centered">
-
 	 <div class="centered_title">
-            <h2>SAVE <span>your</span> PLACE</h2>
-            <p class="under_title_descr"><span>Répondez s'il vous plaît.</span></p>
-         </div>
+      <h2><%= I18n.t "rsvp.title.save" %> <span><%= I18n.t "rsvp.title.your" %></span> <%= I18n.t "rsvp.title.place" %></h2>
+      <p class="under_title_descr"><span><%= I18n.t "rsvp.desc" %></span></p>
+   </div>
 
-         <%= render 'form', rsvp: @rsvp %>
-
-</div><!-- End of content-->
+	 <%= render 'form', rsvp: @rsvp %>
+</div>

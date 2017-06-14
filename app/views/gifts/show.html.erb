@@ -1,12 +1,12 @@
 <div class="section_centered">
 
-   <h3>You are giving <%= @gift.amount %> <%= @gift.currency %>. The amount will be converted to USD.</h3>
+   <h3><%= I18n.t "gifts.giving" %> <%= @gift.amount %> <%= @gift.currency %>. <%= I18n.t "gifts.converted" %>.</h3>
 
    <%= form_tag charges_path(gift: @gift) do %>
      <center>
        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-             data-description="Gift for Annie & Rafid"
+             data-description="<%= I18n.t "gifts.stripe_desc" %>"
              data-amount="<%= @amount %>"
              data-locale="auto"></script>
       </center>

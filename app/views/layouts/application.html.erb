@@ -17,15 +17,15 @@
   <body>
     <nav id="main_menu" class="menuwhite">
     	<ul>
-    		<li><%= link_to 'HOME', root_path, class: 'selected fade-page' %></li>
-        <li><%= link_to 'LOCATION', location_path, class: 'fade-page' %></li>
-        <li><%= link_to 'GUESTBOOK', guestbook_path, class: 'fade-page' %></li>
-        <li><%= link_to 'GIFT', '/gift', class: 'fade-page' %></li>
-        <li><%= link_to 'VISA', '/visa', class: 'fade-page' %></li>
-        <li><%= link_to 'RSVP', '/rsvp', class: 'fade-page' %></li>
+    		<li><%= link_to t("navbar.home"), root_path, class: 'selected fade-page' %></li>
+        <li><%= link_to t("navbar.location"), location_path, class: 'fade-page' %></li>
+        <li><%= link_to t("navbar.guestbook"), guestbook_path, class: 'fade-page' %></li>
+        <li><%= link_to t("navbar.gift"), '/gift', class: 'fade-page' %></li>
+        <li><%= link_to t("navbar.visa"), '/visa', class: 'fade-page' %></li>
+        <li><%= link_to t("navbar.rsvp"), '/rsvp', class: 'fade-page' %></li>
         <% if(!user_signed_in?) %>
-          <li><%= link_to "REGISTER", new_user_registration_path %></li>
-          <li><%= link_to 'LOGIN', new_user_session_path, class: 'fade-page' %></li>
+          <li><%= link_to t("navbar.register"), new_user_registration_path %></li>
+          <li><%= link_to t("navbar.login"), new_user_session_path, class: 'fade-page' %></li>
         <% else %>
           <li class="menu-item-has-children"><a class="selected">Logged in as <%= current_user.first_name %></a>
             <ul class="sub-menu menuwhite">
@@ -34,6 +34,11 @@
             </ul>
           </li>
         <% end %>
+        <% if I18n.locale == :en %>
+          <!-- <li><%= link_to t("navbar.russian"), locale: "ru" %></li> -->
+        <% else %>
+          <li><%= link_to t("navbar.english"), locale: "en" %></li>
+        <% end %>
     	</ul>
     </nav>
     <%= yield %>
@@ -41,11 +46,11 @@
      <div class="section_centered">
 
        <div class="footer_centered_title">
-         <h2>ANNIE <span>and </span> RAFID</h2>
+         <h2><%= I18n.t "footer.annie" %> <span><%= I18n.t "footer.and" %></span> <%= I18n.t "footer.rafid" %></h2>
        </div>
 
        <div class="footer_rsvp">
-         <h5 style="font-weight: 400">Made with <i class="fa fa-heart" aria-hidden="true"></i> in Moscow and Oslo</h5>
+         <h5 style="font-weight: 400"><%= I18n.t "footer.madewith" %> <i class="fa fa-heart" aria-hidden="true"></i> <%= I18n.t "footer.incities" %></h5>
        </div>
 
     </div>

@@ -1,18 +1,18 @@
 <div class="section_centered">
 
 	 <div class="centered_title">
-            <h2>OUR <span>lovely</span> WEDDING</h2>
-            <p class="under_title_descr"><span>We're having the wedding party at an awesome venue</span></p>
+            <h2><%= I18n.t "location.title.our" %> <span><%= I18n.t "location.title.lovely" %></span> <%= I18n.t "location.title.wedding" %></h2>
+            <p class="under_title_descr"><span><%= I18n.t "location.desc" %></span></p>
          </div>
 
 	<div class="full_width">
         <div class="imageblock-left">
 		<div class="imageblock-img"><span></span><%= image_tag 'location.jpg' %></div>
 		<div class="imageblock-text-right">
-			<h2>Wedding Venue</h2>
-			<p>The venue is a cottage on a plot of 75 acres, 20 km from Moscow to Dmitrov. There are 11 bedrooms, 34 beds, 3 bathrooms and a kitchen. There are 5 spaces for cars.</p>
-			<span class="location_row_white">Moskova, Nekrasovsky</span>
-			<span class="phone_row_white">+7 916 394-34-68</span>
+			<h2><%= I18n.t "location.box.title" %></h2>
+			<p><%= I18n.t "location.box.text" %></p>
+			<span class="location_row_white"><%= I18n.t "location.box.place" %></span>
+			<span class="phone_row_white"><%= I18n.t "location.box.phone" %></span>
 	         </div>
 	</div>
 	</div>

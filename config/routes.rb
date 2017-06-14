@@ -1,25 +1,24 @@
 Rails.application.routes.draw do
-  resources :posts
-  resources :gifts
-  resources :guests
-  resources :rsvps
+  scope "(:locale)", locale: /en|ru/ do
+    resources :posts
+    resources :gifts
+    resources :guests
+    resources :rsvps
 
-  devise_for :users
+    devise_for :users
 
-  root 'pages#home'
+    root 'pages#home'
 
-  get 'guestbook', to: 'posts#index'
+    get 'guestbook', to: 'posts#index'
 
-  get 'rsvp', to: 'rsvps#new'
+    get 'rsvp', to: 'rsvps#new'
 
-  get 'gift', to: 'gifts#new'
+    get 'gift', to: 'gifts#new'
 
-  get 'visa' => 'pages#visa'
+    get 'visa' => 'pages#visa'
 
-  get 'location' => 'pages#location'
+    get 'location' => 'pages#location'
 
-  resources :charges
-  # post 'charges/:gift', to: 'charges#gift'
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+    resources :charges
+  end
 end

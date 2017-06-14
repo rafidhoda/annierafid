@@ -1,10 +1,10 @@
 <div class="form_content_rsvp">
   <h3 class="form_toptitle" id="Note"></h3>
-  <h3 class="form_subtitle">CHOOSE AMOUNT &amp; CURRENCY</h3>
+  <h3 class="form_subtitle"><%= I18n.t "gifts.title" %></h3>
 <%= form_with(model: gift, local: true) do |form| %>
   <% if gift.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(gift.errors.count, "error") %> prohibited this gift from being saved:</h2>
+      <h2><%= pluralize(gift.errors.count, "error") %> <%= I18n.t "gifts.error_message" %></h2>
 
       <ul>
       <% gift.errors.full_messages.each do |message| %>
@@ -15,17 +15,16 @@
   <% end %>
 
   <div class="form_section">
-
       <div class="left12">
         <div class="form_row_full">
-      <label>AMOUNT (min 30 rubles)</label>
+      <label><%= I18n.t "gifts.amount" %></label>
       <%= form.number_field :amount, id: :gift_amount, class: 'form_input required' %>
       </div>
     </div>
 
       <div class="left12_last">
         <div class="form_row_full">
-        <label>CURRENCY</label>
+        <label><%= I18n.t "gifts.currency" %></label>
         <div class="select_container">
         <%= form.select :currency, [["RUB", "rub"], ["NOK", "nok"], ["GBP", "gbp"], ["USD", "usd"]], id: :gift_currency %>
         </div>
@@ -33,11 +32,9 @@
       </div>
 
       <div class="full_width">
-
         <center>
-          <%= form.submit 'Proceed to Payment', class: 'form_submit_contact'  %>
+          <%= form.submit t("gifts.payment_button"), class: 'form_submit_contact'  %>
         </center>
-
       </div>
  </div>
 <% end %>

@@ -1,15 +1,15 @@
 <div class="container text-center" style="margin-top: 100px">
 
-<h1>Guestbook</h1>
+<h1><%= I18n.t "posts.title" %></h1>
 
-<h3><%= link_to 'Add a Post', new_post_path, class: 'countdown_rsvp fade-page', style: 'margin-top: 0px' %></h3>
+<h3><%= link_to t("posts.post_button"), new_post_path, class: 'countdown_rsvp fade-page', style: 'margin-top: 0px' %></h3>
 
 <!-- Projects Row -->
   <div class="row" style="max-width: 500px; margin: 0 auto;">
     <% @posts.each do |post| %>
     <div class="col-md-12" style="margin-top: 40px">
       <div class="panel panel-default">
-        <div class="panel-heading">Posted by <%= post.user.first_name %>  <%= post.user.last_name %> <%= time_ago_in_words(post.created_at) %> ago</div>
+        <div class="panel-heading"><%= I18n.t "posts.posted_by" %> <%= post.user.first_name %>  <%= post.user.last_name %> <%= time_ago_in_words(post.created_at) %> ago</div>
         <div class="panel-body">
           <p style="margin-bottom: 10px"><%= post.body %></p>
           <% if post.post_image? %>

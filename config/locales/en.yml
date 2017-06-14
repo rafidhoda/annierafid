@@ -30,4 +30,114 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  navbar:
+    home: "HOME"
+    location: "LOCATION"
+    guestbook: "GUESTBOOK"
+    gift: "GIFT"
+    visa: "VISA"
+    rsvp: "RSVP"
+    register: "REGISTER"
+    login: "LOGIN"
+    russian: "РУССКИЙ"
+  home:
+    hero:
+      annie: "Annie"
+      rafid: "Rafid"
+    about:
+      title:
+        annie: "Annie"
+        rafid: "Rafid"
+      desc: "We are getting married this August and you're invited!"
+      text: "Hi! We would like to welcome you to our wedding website. We are getting married on the 9th of August 2017. We're having a family only party on the 9th, but we're inviting all our friends and family on the 12th for a wedding party. The wedding will take place in Moscow, Russia. If you're a friend or relative of Annie or Rafid, then you're invited! Please let us know if you're coming by RSVPing. We hope to see you this August!"
+      message:
+        annie: "Message Annie"
+        rafid: "Message Rafid"
+    wedding:
+      title: "Wedding Date"
+      desc: "We're getting married on the 9th of August 2017"
+      text: "The wedding registration will take place on the 9th of August 2017 in Moscow. We are having a wedding party for friends and family on Saturday, the 12th of August. Please let us know if you are coming by RSVPing."
+      rsvp: "RSVP"
+    gift:
+      title: "Give a gift"
+      desc: "You can give us a monetary gift if you want"
+      button: "GIVE A GIFT"
+    bridegroom:
+      bridemaids: "BRIDEMAIDS"
+      and: "and"
+      groomsmen: "GROOMSMEN'S"
+      desc: "Best Man & Maid of Honor"
+      comingsoon: "Coming soon..."
+    guestbook:
+      title: "Guestbook"
+      desc: "Sign our guestbook"
+      text: "We've set up a guestbook so that you can leave a message."
+      button: "GO TO GUESTBOOK"
+  location:
+    title:
+      our: "OUR"
+      lovely: "lovely"
+      wedding: "WEDDING"
+    desc: "We're having the wedding party at an awesome venue"
+    box:
+      title: "Wedding Venue"
+      text: "The venue is a cottage on a plot of 75 acres, 20 km from Moscow to Dmitrov. There are 11 bedrooms, 34 beds, 3 bathrooms and a kitchen. There are 5 spaces for cars."
+      place: "Moscow, Nekrasovsky"
+      phone: "+7 916 394-34-68"
+  rsvp:
+    errors:
+      please: "Please fill in all fields:"
+    title:
+      save: "SAVE"
+      your: "your"
+      place: "PLACE"
+    desc: "Let us know whether you're coming"
+    form:
+      title: "GUEST DETAILS & COMMENTS"
+      first_name: "FIRST NAME"
+      first_name_placeholder: "Elon"
+      last_name: "LAST NAME"
+      last_name_placeholder: "Musk"
+      email: "EMAIL"
+      email_placeholder: "elon@tesla.com"
+      phone: "PHONE"
+      phone_placeholder: "+7 925 712 53 11"
+      other_comments: "OTHER COMMENTS"
+      other_comments_placeholder: "Anything you'd like us to know about? Write it here"
+      add_guests: "ADD GUESTS"
+      guests:
+        first_name: "First Name"
+        last_name: "Last Name"
+        add_guest_button: "Add Guest"
+        delete: "Delete"
+      rsvp_button: "Send RSVP"
+    thanks: "Thank you for saving your place! We look forward to seeing you on the 12th of August."
+  gifts:
+    main_title: "Give a Gift"
+    desc: "If you want to"
+    title: "CHOOSE AMOUNT & CURRENCY"
+    error_message: "prohibited this gift from being saved:"
+    amount: "AMOUNT"
+    currency: "CURRENCY"
+    payment_button: "Proceed to Payment"
+    giving: "You are giving"
+    converted: "The amount will be converted to USD"
+    stripe_desc: "Gift for Annie & Rafid"
+  posts:
+    title: "Guestbook"
+    post_button: "Add a Post"
+    posted_by: "Posted by"
+    post_a_message: "Post a Message"
+    post: "POST*"
+    post_placeholder: "Got a funny story about us to tell? Just want to congratulate? Write it here!"
+    upload_picture: "UPLOAD PICTURE"
+  charges:
+    thanks: "Thank you for your"
+    gift: "gift!"
+    back: "Get back"
+  footer:
+    annie: "ANNIE"
+    and: "and"
+    rafid: "RAFID"
+    madewith: "Made with"
+    incities: "in Moscow and Oslo"
