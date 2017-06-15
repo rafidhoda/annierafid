@@ -29,8 +29,8 @@
         <% else %>
           <li class="menu-item-has-children"><a class="selected">Logged in as <%= current_user.first_name %></a>
             <ul class="sub-menu menuwhite">
-              <li><%= link_to 'EDIT PROFILE', edit_user_registration_path, class: 'fade-page' %></li>
-              <li><%= link_to 'LOGOUT', destroy_user_session_path, method: :delete, class: 'fade-page' %></li>
+              <li><%= link_to t("navbar.edit_profile"), edit_user_registration_path, class: 'fade-page' %></li>
+              <li><%= link_to t("navbar.logout"), destroy_user_session_path, method: :delete, class: 'fade-page' %></li>
             </ul>
           </li>
         <% end %>

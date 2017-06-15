@@ -40,6 +40,8 @@ en:
     register: "REGISTER"
     login: "LOGIN"
     russian: "РУССКИЙ"
+    edit_profile: "EDIT PROFILE"
+    logout: "LOGOUT"
   home:
     hero:
       annie: "Annie"
