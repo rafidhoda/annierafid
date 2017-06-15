@@ -42,6 +42,14 @@ en:
     russian: "РУССКИЙ"
     edit_profile: "EDIT PROFILE"
     logout: "LOGOUT"
+  register:
+    title: "Sign up"
+    first_name: "FIRST NAME"
+    last_name: "LAST NAME"
+    email: "EMAIL"
+    password: "PASSWORD"
+    password_confirmation: "PASSWORD CONFIRMATION"
+    submit: "Sign up"
   home:
     hero:
       annie: "Annie"
