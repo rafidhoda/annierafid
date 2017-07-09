@@ -20,9 +20,9 @@
     		<li><%= link_to t("navbar.home"), root_path, class: 'selected fade-page' %></li>
         <li><%= link_to t("navbar.location"), location_path, class: 'fade-page' %></li>
         <li><%= link_to t("navbar.guestbook"), guestbook_path, class: 'fade-page' %></li>
-        <li><%= link_to t("navbar.gift"), '/gift', class: 'fade-page' %></li>
-        <li><%= link_to t("navbar.visa"), '/visa', class: 'fade-page' %></li>
-        <li><%= link_to t("navbar.rsvp"), '/rsvp', class: 'fade-page' %></li>
+        <li><%= link_to t("navbar.gift"), new_gift_path, class: 'fade-page' %></li>
+        <li><%= link_to t("navbar.visa"), visa_path, class: 'fade-page' %></li>
+        <li><%= link_to t("navbar.rsvp"), new_rsvp_path, class: 'fade-page' %></li>
         <% if(!user_signed_in?) %>
           <li><%= link_to t("navbar.register"), new_user_registration_path %></li>
           <li><%= link_to t("navbar.login"), new_user_session_path, class: 'fade-page' %></li>
