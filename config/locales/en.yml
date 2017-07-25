@@ -131,9 +131,9 @@ en:
     errors:
       please: "Please fill in all fields:"
     title:
-      save: "SAVE"
+      save: "Save"
       your: "your"
-      place: "PLACE"
+      place: "Place"
     desc: "Let us know whether you're coming"
     form:
       title: "GUEST DETAILS & COMMENTS"
@@ -161,6 +161,7 @@ en:
         delete: "Delete"
       rsvp_button: "RSVP"
     thanks: "Thank you for saving your place! We look forward to seeing you on the 12th of August."
+    sad: "It is very sad. We will miss you! 😞"
   gifts:
     main_title: "Give a Gift"
     desc: "If you want to"
@@ -188,8 +189,8 @@ en:
     gift: "gift!"
     back: "Get back"
   footer:
-    annie: "ANNIE"
+    annie: "Annie"
     and: "and"
-    rafid: "RAFID"
+    rafid: "Rafid"
     madewith: "Made with"
     incities: "in Moscow and Oslo"

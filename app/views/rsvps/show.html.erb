@@ -1,8 +1,16 @@
 <div class="section_centered">
 
-	 <div class="centered_title">
-     <h3><%= I18n.t "rsvp.thanks" %></h3>
-		 <center><%= image_tag 'weddingcrashers.gif' %></center>
-  </div>
+
+	<% if @rsvp.coming == true %>
+		 <div class="centered_title">
+	     <h3><%= I18n.t "rsvp.thanks" %></h3>
+			 <center><%= image_tag 'weddingcrashers.gif' %></center>
+	  </div>
+	<% else %>
+		<div class="centered_title">
+			<h3><%= I18n.t "rsvp.sad" %></h3>
+			<center><%= image_tag 'sad.gif' %></center>
+	 </div>
+	<% end %>
 
 </div>
