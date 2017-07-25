@@ -1,6 +1,4 @@
 <div class="form_content_rsvp">
-  <h3 class="form_toptitle" id="Note"></h3>
-  <h3 class="form_subtitle"><%= I18n.t "gifts.title" %></h3>
 <%= form_with(model: gift, local: true) do |form| %>
   <% if gift.errors.any? %>
     <div id="error_explanation">
