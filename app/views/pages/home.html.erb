@@ -1,8 +1,10 @@
 <header class="header">
   <div class="title_container">
       <% if I18n.locale == :en %>
+      <div style="margin-top:-70px">
         <div class="title_up"><%= t "home.hero.annie" %></div>
         <div class="title_down">&amp;<%= t "home.hero.rafid" %></div>
+      </div>
       <% else %>
         <div class="title_up" style="font-family: Lobster; font-weight: 100"><%= t "home.hero.annie" %></div>
         <div class="title_down" style="font-family: Lobster">&amp;<%= t "home.hero.rafid" %></div>
@@ -16,9 +18,9 @@
 <div class="content">
   <!-- About START -->
   <div id="about_home" class="section_centered">
-    <div class="centered_title">
-      <h2 style="font-family: Ubuntu; margin-top: -60px"><%= I18n.t "home.about.title.hey" %></h2>
-    </div>
+
+      <center><h2 style="font-family: Ubuntu; margin-top: -60px; margin-bottom: 50px; font-size: 50px"><%= I18n.t "home.about.title.hey" %></h2></center>
+
     <div class="about_section">
       <div class="about_pic_container">
         <div class="about_pic" style="margin-top: -40px">
@@ -74,12 +76,12 @@
   <section style="background-color: #fbf8f2;" id="party">
    <div class="section_centered">
 
-  		<div class="centered_title" style="margin-top: -40px">
-  			<h2><%= I18n.t "home.wedding.title" %></h2>
-        <center style="margin-top: 30px"><%= image_tag 'party.gif' %></center>
-  		</div>
 
-        <div id="some_details" class="about_section" style="margin-top: -30px">
+  			<center><h2 style="font-family: Ubuntu; margin-top: -60px; margin-bottom: 10px; font-size: 40px"><%= I18n.t "home.wedding.title" %></h2></center>
+        <center style="margin-top: 30px"><%= image_tag 'party.gif', style: "max-width: 500px; width: 100%; margin-top: -20px" %></center>
+
+
+        <div id="some_details" class="about_section" style="margin-top: 30px">
             <p style="text-align: left"><%= I18n.t "home.wedding.text1" %></p>
             <p style="text-align: center"><strong><%= I18n.t "home.wedding.bold" %></strong><%= I18n.t "home.wedding.text2" %></p>
         </div>
