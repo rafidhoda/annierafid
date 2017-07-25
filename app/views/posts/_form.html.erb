@@ -14,9 +14,14 @@
    <%= f.file_field :post_image, id:"file-input" %>
   </div>
 
+  <div class="form-group">
+    <label><%= I18n.t "posts.name" %></label>
+    <%= f.text_field :name, class: 'form_input required', placeholder: t("posts.name_placeholder") %>
+  </div>
+
 </div>
 
   <div class="form-actions">
-    <center><%= f.button :submit, class: 'simple_button fade-page', style: 'margin-top: 30px' %></center>
+    <center><%= f.submit t("posts.create_post"), class: 'simple_button fade-page', style: 'margin-top: 30px' %></center>
   </div>
 <% end %>

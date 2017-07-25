@@ -1,5 +1,4 @@
 class Post < ApplicationRecord
-  belongs_to :user
 
   has_attached_file :post_image, styles: {
     thumb: '100x100>',
@@ -10,5 +9,5 @@ class Post < ApplicationRecord
 
   validates_attachment_content_type :post_image, :content_type => /\Aimage\/.*\Z/
   validates :body, presence: true
-  
+
 end

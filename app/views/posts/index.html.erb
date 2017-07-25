@@ -9,7 +9,7 @@
     <% @posts.each do |post| %>
     <div class="col-md-12" style="margin-top: 40px">
       <div class="panel panel-default">
-        <div class="panel-heading"><%= I18n.t "posts.posted_by" %> <%= post.user.first_name %>  <%= post.user.last_name %> <%= time_ago_in_words(post.created_at) %> ago</div>
+        <div class="panel-heading"><%= I18n.t "posts.posted_by" %> <%= post.name %></div>
         <div class="panel-body">
           <p style="margin-bottom: 10px"><%= post.body %></p>
           <% if post.post_image? %>

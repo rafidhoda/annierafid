@@ -65,10 +65,34 @@ en:
       rafid: "Rafid"
     about:
       title:
-        annie: "Annie"
-        rafid: "Rafid"
-      desc: "We are getting married this August and you're invited!"
-      text: "Hi! We would like to welcome you to our wedding website. We are getting married on the 9th of August 2017. We're having a family only party on the 9th, but we're inviting all our friends and family on the 12th for a wedding party. The wedding will take place in Moscow, Russia. If you're a friend or relative of Annie or Rafid, then you're invited! Please let us know if you're coming by RSVPing. We hope to see you this August!"
+        hey: "Hey!"
+      desc: "We are getting married! And we really want to see all the people who are dear to us at the wedding party :)"
+      subtitle: "We are getting married!"
+      text: "We really want to see all the people who are dear to us at the wedding party :)"
+      where:
+        q: "Where?"
+        a: "In Moscow"
+      when:
+        q: "When?"
+        a: "12th of August 2017"
+      some_details:
+        title: "Some details"
+        text: "The registration of marriage will happen on 9th of August but we will celebrate it on the 12th, so mark this date in your calendar and come! The celebration will take place at the country house. You can get there by train, car of take a special bus for guests. All the details about the party you can find "
+        here: "here."
+      awesome:
+        title: "How does this awesome website work?"
+        text: "We ask each one of you to respond to our invitation so that we will know who is able to come and who won’t make it. A lot of small (and not so small) things depend on this so please take few minutes to do that. You can RSVP "
+        here: "here."
+      gift:
+        title: "Gift"
+        text: "It’s not that important and you don’t have to give us anything, we’re completely happy with just getting an opportunity to hug you but if you decide to give us a gift please don’t buy us an extremely expensive and rare Chinese tea set or a carpet that is worth a fortune and that we will hold on to and cherish  for another 20 years until our 6th child will finally ruin it forever. We would really appreciate it if you’d give us a monetary gift. That would be a perfect gift for us now while we are not billionaires yet! If you’ll decide on doing that you can of course give it to us in the envelope with kittens or you can just use this site to do it and transfer it from your card. Just go to "
+        this_page: "this page"
+        smiley: " :)"
+      guestbook:
+        title: "Guestbook"
+        text: "If you are somewhere far away and won’t be able to come or if you just want to tell us something nice, or maybe you have an embarrassing picture of us that want to share it with the world, either way - welcome! You can do it in the "
+        guestbook: "Guestbook"
+        smiley: ". :)"
       message:
         annie: "Message Annie"
         rafid: "Message Rafid"
@@ -121,15 +145,21 @@ en:
       email_placeholder: "elon@tesla.com"
       phone: "PHONE"
       phone_placeholder: "+7 925 712 53 11"
+      transportation:
+        title: "How to get there?"
+        option1: "Personal car"
+        option2: "Train"
+        option3: "Guest bus"
       other_comments: "OTHER COMMENTS"
       other_comments_placeholder: "Anything you'd like us to know about? Write it here"
       add_guests: "ADD GUESTS"
+      cant_come: "I can't come"
       guests:
         first_name: "First Name"
         last_name: "Last Name"
         add_guest_button: "Add Guest"
         delete: "Delete"
-      rsvp_button: "Send RSVP"
+      rsvp_button: "RSVP"
     thanks: "Thank you for saving your place! We look forward to seeing you on the 12th of August."
   gifts:
     main_title: "Give a Gift"
@@ -150,6 +180,9 @@ en:
     post: "POST*"
     post_placeholder: "Got a funny story about us to tell? Just want to congratulate? Write it here!"
     upload_picture: "UPLOAD PICTURE"
+    name: "Name"
+    name_placeholder: "Pavel Durov"
+    create_post: "Create Post"
   charges:
     thanks: "Thank you for your"
     gift: "gift!"

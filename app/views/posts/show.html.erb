@@ -5,7 +5,7 @@
 <div class="row" style="max-width: 660px; margin: 0 auto;">
   <div class="col-md-12">
     <div class="panel panel-default">
-      <div class="panel-heading">Posted by <%= @post.user.first_name %>  <%= @post.user.last_name %> <%= time_ago_in_words(@post.created_at) %> ago</div>
+      <div class="panel-heading">Posted by <%= @post.name %> <%= time_ago_in_words(@post.created_at) %> ago</div>
       <div class="panel-body">
         <p style="margin-bottom: 10px"><%= @post.body %></p>
           <%= image_tag @post.post_image(:large) if @post.post_image? %>

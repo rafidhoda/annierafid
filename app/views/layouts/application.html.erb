@@ -8,36 +8,29 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
+    <link href="https://fonts.googleapis.com/css?family=Yeseva+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alice" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Clicker+Script' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,900' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
   </head>
 
   <body>
     <nav id="main_menu" class="menuwhite">
     	<ul>
     		<li><%= link_to t("navbar.home"), root_path, class: 'selected fade-page' %></li>
-        <li><%= link_to t("navbar.location"), location_path, class: 'fade-page' %></li>
-        <li><%= link_to t("navbar.guestbook"), guestbook_path, class: 'fade-page' %></li>
-        <li><%= link_to t("navbar.gift"), new_gift_path, class: 'fade-page' %></li>
-        <li><%= link_to t("navbar.visa"), visa_path, class: 'fade-page' %></li>
-        <li><%= link_to t("navbar.rsvp"), new_rsvp_path, class: 'fade-page' %></li>
-        <% if(!user_signed_in?) %>
-          <li><%= link_to t("navbar.register"), new_user_registration_path %></li>
-          <li><%= link_to t("navbar.login"), new_user_session_path, class: 'fade-page' %></li>
-        <% else %>
-          <li class="menu-item-has-children"><a class="selected">Logged in as <%= current_user.first_name %></a>
-            <ul class="sub-menu menuwhite">
-              <li><%= link_to t("navbar.edit_profile"), edit_user_registration_path, class: 'fade-page' %></li>
-              <li><%= link_to t("navbar.logout"), destroy_user_session_path, method: :delete, class: 'fade-page' %></li>
-            </ul>
-          </li>
+        <% if I18n.locale == :ru %>
+          <li><%= link_to t("navbar.location"), '../ru/#party', class: 'fade-page' %></li>
         <% end %>
+        <li><%= link_to t("navbar.guestbook"), guestbook_path, class: 'fade-page' %></li>
         <% if I18n.locale == :en %>
           <li><%= link_to t("navbar.russian"), locale: "ru" %></li>
         <% else %>
-          <li><%= link_to t("navbar.english"), locale: "en" %></li>
+          <li><%= link_to "ENGLISH", locale: "en" %></li>
         <% end %>
     	</ul>
     </nav>
@@ -46,7 +39,7 @@
      <div class="section_centered">
 
        <div class="footer_centered_title">
-         <h2><%= I18n.t "footer.annie" %> <span><%= I18n.t "footer.and" %></span> <%= I18n.t "footer.rafid" %></h2>
+         <h2 style="font-family: Lobster"><%= I18n.t "footer.annie" %> <span><%= I18n.t "footer.and" %></span> <%= I18n.t "footer.rafid" %></h2>
        </div>
 
        <div class="footer_rsvp">

@@ -3,16 +3,22 @@
       <%= simple_form_for(@rsvp) do |f| %>
       <% if rsvp.errors.any? %>
     <div id="error_explanation">
-      <h2><%= I18n.t "rsvp.errors.please" %></h2>
-      <ul>
-      <% rsvp.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+      <h2 style="color: #ef6350"><%= I18n.t "rsvp.errors.please" %></h2>
     </div>
   <% end %>
 
- <h3 class="form_subtitle"><%= I18n.t "rsvp.form.title" %></h3>
+  <div class="container"  style="margin-top: 30px; margin-bottom: 60px">
+<h6 style="margin-left: -18px">Быть или не быть?</h6>
+<label class="radio-inline" style="font-weight: 400; margin-left: 5px;">
+<input type="radio" name="optradio">Я приеду
+</label>
+<label class="radio-inline" style="margin-left: 50px; font-weight: 400">
+<input type="radio" name="optradio">Не смогу приехать
+</label>
+</div>
+
+
+
       <div class="form_section">
           <div class="form_row left14">
           <label><%= I18n.t "rsvp.form.first_name" %></label>
@@ -30,11 +36,29 @@
           <label><%= I18n.t "rsvp.form.phone" %></label>
           <%= f.text_field :phone_number, id: :rsvp_phone_number, class: 'form_input required', placeholder: t("rsvp.form.phone_placeholder") %>
           </div>
-          <div class="form_row left12">
+          <div class="form_row left14">
+
+
+            <div class="container"  style="margin-top: 30px">
+<h6 style="margin-left: -18px"><%= I18n.t "rsvp.form.transportation.title" %></h6>
+      <label class="radio-inline" style="font-weight: 400; margin-left: 5px;">
+        <input type="radio" name="optradio"><%= I18n.t "rsvp.form.transportation.option1" %>
+      </label>
+      <label class="radio-inline" style="margin-left: 50px; font-weight: 400">
+        <input type="radio" name="optradio"><%= I18n.t "rsvp.form.transportation.option2" %>
+      </label>
+      <label class="radio-inline" style="margin-left: 50px; font-weight: 400">
+        <input type="radio" name="optradio"><%= I18n.t "rsvp.form.transportation.option3" %>
+      </label>
+
+  </div>
+
+          </div>
+          <div class="form_row left12" style="margin-top: 30px">
           <label><%= I18n.t "rsvp.form.other_comments" %></label>
           <%= f.text_area :comments, id: :rsvp_comments, class: 'form_textarea_full', placeholder: t("rsvp.form.other_comments_placeholder") %>
           </div>
-          <div class="form_row left12_last">
+          <div class="form_row left12_last" style="margin-top: 50px">
             <label><%= I18n.t "rsvp.form.add_guests" %></label>
             <table class="table">
               <thead>
@@ -56,7 +80,7 @@
           </div>
      </div>
        <center>
-         <%= f.submit t("rsvp.form.rsvp_button"), class: 'form_submit_contact' %>
+         <%= f.submit t("rsvp.form.rsvp_button"), class: 'simple_button fade-page', style: "font-size: 20px" %>
        </center>
       <% end %>
 </div>
